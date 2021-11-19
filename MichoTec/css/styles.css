@@ -58,7 +58,6 @@ li a {
 }
 
 .items_ul {
-  max-height: 20px;
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -354,10 +353,8 @@ textarea {
   color: #05f;
 }
 
-.responsive_button{
-  
+.responsive_button {
   display: none;
-
 }
 
 /*
@@ -367,7 +364,7 @@ RESOLUCIÓN PARA TABLETS
 */
 
 @media only screen and (max-width: 768px) {
-  .responsive_button{
+  .responsive_button {
     display: block;
   }
 
@@ -511,16 +508,65 @@ DISEÑO PARA MOVIL
 */
 
 @media only screen and (max-width: 360px) {
-  .items {
-    display: none;
+  .items_container .items {
+    position: absolute;
+    left: 0;
+    top: -1000px;
   }
 
-  .responsive_button{
+  .items_container:hover > .items {
+    top: -330px;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 330px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 5px 5px;
+    width: 80%;
+    margin-top: 410px;
+    transition: all 0.6s;
+    border: 1px solid black;
+  }
+
+  /*.items:hover{
+    margin-top: -1000px;
+  }*/
+
+  .items_ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: inherit;
+    padding-left: 0px;
+  }
+
+  .items_ul > li {
+    margin-left: 0;
+  }
+
+  .cart {
+    height: 15%;
+  }
+
+  .carrito {
+    height: 100%;
+  }
+
+  .items {
+    background-color: #5ed2bb;
+  }
+
+  .responsive_button {
     display: flex;
     justify-content: end;
+    margin-right: 2%;
   }
 
-  .img_input{
+  .img_input {
     width: 30%;
   }
   .nav_bar {
@@ -528,7 +574,7 @@ DISEÑO PARA MOVIL
   }
 
   .search {
-    width: 120px;
+    width: 150px;
   }
 
   .welcome {
@@ -569,6 +615,10 @@ DISEÑO PARA MOVIL
 
   .product_item_featured img {
     width: 150%;
+  }
+
+  .featured_products {
+    text-align: center;
   }
 
   .title {
