@@ -27,7 +27,7 @@ header {
   margin-right: 15px;
 }
 
-.goku {
+.search {
   width: 30%;
   height: 30px;
   padding: 0 5px 0 5px;
@@ -318,8 +318,8 @@ footer {
   align-items: center;
 }
 
-.div_address p{
-    margin: 10px;
+.div_address p {
+  margin: 10px;
 }
 
 ul {
@@ -352,4 +352,304 @@ textarea {
 
 .div_social_media li a:hover {
   color: #05f;
+}
+
+.responsive_button{
+  
+  display: none;
+
+}
+
+/*
+
+RESOLUCIÓN PARA TABLETS
+
+*/
+
+@media only screen and (max-width: 768px) {
+  .responsive_button{
+    display: block;
+  }
+
+  .items {
+    display: none;
+  }
+
+  .nav_bar {
+    justify-content: inherit;
+  }
+
+  .search {
+    width: 10px;
+  }
+
+  .welcome {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .welcome h1 {
+    font-size: 40px;
+  }
+
+  .section_imgs {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .product_item {
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .arrow,
+  .arrow2 {
+    display: none;
+  }
+
+  .featured_containers {
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .product_item_featured {
+    width: 100%;
+  }
+
+  .product_item_featured img {
+    width: 150%;
+  }
+
+  .title {
+    height: 70px;
+  }
+
+  .announcement_text {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .show_images,
+  .small_img_gallery {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .small_img_gallery,
+  .small_img {
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  .column {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .small_img img {
+    height: 180px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .big_img {
+    height: 500px;
+  }
+
+  .big_img img {
+    width: 300px;
+  }
+  .section_about .about_us {
+    padding: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer_right {
+    margin: 0;
+    padding: 0;
+  }
+
+  .div_address {
+    width: 100%;
+  }
+
+  .footer_right img,
+  .footer_right p {
+    width: 50%;
+  }
+
+  .contact {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    height: 150%;
+    width: 80%;
+    margin: 50px 0;
+    border: 1px solid black;
+  }
+  .inputs {
+    width: 80%;
+  }
+}
+
+/*
+DISEÑO PARA MOVIL
+*/
+
+@media only screen and (max-width: 360px) {
+  .items {
+    display: none;
+  }
+
+  .responsive_button{
+    display: flex;
+    justify-content: end;
+  }
+
+  .img_input{
+    width: 30%;
+  }
+  .nav_bar {
+    justify-content: space-between;
+  }
+
+  .search {
+    width: 120px;
+  }
+
+  .welcome {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .welcome h1 {
+    font-size: 40px;
+  }
+
+  .section_imgs {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .product_item {
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .arrow,
+  .arrow2 {
+    display: none;
+  }
+
+  .featured_containers {
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .product_item_featured {
+    width: 100%;
+  }
+
+  .product_item_featured img {
+    width: 150%;
+  }
+
+  .title {
+    height: 70px;
+  }
+
+  .announcement_text {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .show_images,
+  .small_img_gallery {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .small_img_gallery,
+  .small_img {
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  .column {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .small_img img {
+    height: 180px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .big_img {
+    height: 500px;
+  }
+
+  .big_img img {
+    width: 300px;
+  }
+  .section_about .about_us {
+    padding: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer_right {
+    margin: 0;
+    padding: 0;
+  }
+
+  .div_address {
+    width: 100%;
+  }
+
+  .footer_right img,
+  .footer_right p {
+    width: 50%;
+  }
+
+  .contact {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    height: 150%;
+    width: 80%;
+    margin: 50px 0;
+    border: 1px solid black;
+  }
+  .inputs {
+    width: 80%;
+  }
 }
