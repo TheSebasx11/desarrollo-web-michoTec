@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,70 +10,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <title>MichoTec - Producto</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav_bar">
             <div class="img_input">
-                <img src="/imagenes/MichoTec logo.png"
-                    class="logo">
-                
-            </div><input type="search" placeholder="Buscar producto" class="goku">
-            <div class="items">
-                <ul class="items_ul">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="">Acerca de</a></li>
-                    <li><a href="shop.html">Compra</a></li>
-                    <li><a href="product.html">Productos</a></li>
-                    <li><a href="">Ayuda</a></li>
-                </ul>
-                <div class="cart">
-                    <img src="data:image/png;base64,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"
-                        class="carrito">
-                    <p>Carrito</p>
-                </div>
+                <img src="imagenes/MichoTec logo.png" class="logo">
             </div>
+            <input type="search" placeholder="Buscar producto" class="search">
+            <div class="items_container">
+                <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" class="responsive_button" />
+                <div class="items">
+                    <ul class="items_ul">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="">Acerca de</a></li>
+                        <li><a href="shop.html">Compra</a></li>
+                        <li><a href="product.html">Productos</a></li>
+                        <li><a href="">Ayuda</a></li>
+                    </ul>
+                    <div class="cart">
+                        <img src="imagenes/carro.png" class="carrito">
+                        <p>Carrito</p>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
     <section class="image_principal">
-    <div class="producto">
-        <div class="photo_container">
-            <img class="product_photo" src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
-        </div>
-        <div class="info_container">
-            <div class="info_title">
-                <h1 class="product_title">
-                    Titulo de producto
-                </h1>
-                <div class="info_stars">
-                    <img class="star"src="./Imagenes producto/iconmonstr-star-3.svg">
-                    <img class="star"src="./Imagenes producto/iconmonstr-star-3.svg">
-                    <img class="star"src="./Imagenes producto/iconmonstr-star-3.svg">
-                    <img class="star"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                    <img class="star"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                    
+        <div class="producto">
+            <div class="photo_container">
+                <img class="product_photo" src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
+            </div>
+            <div class="info_container">
+                <div class="info_title">
+                    <h1 class="product_title">
+                        Titulo de producto
+                    </h1>
+                    <div class="info_stars">
+                        <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star" src="./Imagenes producto/iconmonstr-star-thin.svg">
+
+                    </div>
+                    <p class="info_review">
+                        5 Reviews
+                    </p>
                 </div>
-                <p class="info_review">
-                    5 Reviews
-                </p>
-            </div>
-            <div class="info_description">
-                <p class="product_description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae vero tenetur temporibus incidunt recusandae! Provident, repellat molestiae consequuntur asperiores a similique reiciendis maxime sint optio est fugiat veniam consectetur.
-                </p>
-            </div>
-            <div class="info_buy">
-                <button class="buy_button">
-                    Comprar Ahora
-                </button>
-                <p class="product_price">
-                    $1000
-                </p>
+                <div class="info_description">
+                    <p class="product_description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae vero tenetur temporibus
+                        incidunt recusandae! Provident, repellat molestiae consequuntur asperiores a similique
+                        reiciendis maxime sint optio est fugiat veniam consectetur.
+                    </p>
+                </div>
+                <div class="info_buy">
+                    <button class="buy_button">
+                        Comprar Ahora
+                    </button>
+                    <p class="product_price">
+                        $1000
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     </section>
-    <section class="similar_products"> 
+    <section class="similar_products">
         <div class="photo_columns">
             <div class="photo_title">
                 <h3 class="name_photo_title">
@@ -81,20 +85,21 @@
             </div>
             <div class="article_container">
                 <article class="article_one">
-                    <div class="photo_one"> 
-                        <img class="image_one"src="./Imagenes producto/componentes-de-una-computadora-hardware-interno-motherboard-e1575462591528.jpg">
+                    <div class="photo_one">
+                        <img class="image_one"
+                            src="./Imagenes producto/componentes-de-una-computadora-hardware-interno-motherboard-e1575462591528.jpg">
                     </div>
                     <div class="photo_info_title">
                         <h2 class="photo_product_title">
                             Titulo de producto
                         </h2>
                         <div class="article_stars">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+
                         </div>
                         <p class="article_review">
                             $5000
@@ -102,20 +107,20 @@
                     </div>
                 </article>
                 <article class="article_one">
-                    <div class="photo_one"> 
-                        <img class="image_one"src="./Imagenes producto/componentes.jpg">
+                    <div class="photo_one">
+                        <img class="image_one" src="./Imagenes producto/componentes.jpg">
                     </div>
                     <div class="photo_info_title">
                         <h2 class="photo_product_title">
                             Titulo de producto
                         </h2>
                         <div class="article_stars">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+
                         </div>
                         <p class="article_review">
                             $4500
@@ -123,20 +128,20 @@
                     </div>
                 </article>
                 <article class="article_one">
-                    <div class="photo_one"> 
-                        <img class="image_one"src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
+                    <div class="photo_one">
+                        <img class="image_one" src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
                     </div>
                     <div class="photo_info_title">
                         <h2 class="photo_product_title">
                             Titulo de producto
                         </h2>
                         <div class="article_stars">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+
                         </div>
                         <p class="article_review">
                             $10000
@@ -148,66 +153,70 @@
     </section>
 
     <section class="reviews">
-            <article class="review_article">
-                <div class="review_article_title">
-                    <h2 class="review_title">
-                        Review
-                    </h2>
+        <article class="review_article">
+            <div class="review_article_title">
+                <h2 class="review_title">
+                    Review
+                </h2>
+            </div>
+            <div class="user_container">
+                <div class="user_review">
+                    <img class="user_small" src="./Imagenes producto/iconmonstr-user-6.svg">
                 </div>
-                <div class="user_container">
-                    <div class="user_review">
-                        <img class="user_small" src="./Imagenes producto/iconmonstr-user-6.svg">
-                    </div>
-                    <div class="usser_revier">
-                        <p class="name_review">
-                            <b>Jhon Cena</b>
-                        </p>
-                        <p class="first_review">
-                            Agosto 4 de 2021
-                        </p>
-                        <div class="article_stars">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                        </div>
-                    </div>
-                    <div class="user_text_review">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat voluptatum saepe omnis fugit!
-                        </p>
+                <div class="usser_revier">
+                    <p class="name_review">
+                        <b>Jhon Cena</b>
+                    </p>
+                    <p class="first_review">
+                        Agosto 4 de 2021
+                    </p>
+                    <div class="article_stars">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
                     </div>
                 </div>
-                
-            </article>
-            <article class="review_article">
-                <div class="user_container2">
-                    <div class="user_review">
-                        <img class="user_small" src="./Imagenes producto/iconmonstr-user-6.svg">
-                    </div>
-                    <div class="usser_revier">
-                        <p class="name_review">
-                            <b>Mariana Cena</b>
-                        </p>
-                        <p class="first_review">
-                            Agosto 4 de 2021
-                        </p>
-                        <div class="article_stars">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small"src="./Imagenes producto/iconmonstr-star-thin.svg">
-                        </div>
-                    </div>
-                    <div class="user_text_review">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat voluptatum saepe omnis fugit!
-                        </p>
+                <div class="user_text_review">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
+                        corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
+                        voluptatum saepe omnis fugit!
+                    </p>
+                </div>
+            </div>
+
+        </article>
+        <article class="review_article">
+            <div class="user_container2">
+                <div class="user_review">
+                    <img class="user_small" src="./Imagenes producto/iconmonstr-user-6.svg">
+                </div>
+                <div class="usser_revier">
+                    <p class="name_review">
+                        <b>Mariana Cena</b>
+                    </p>
+                    <p class="first_review">
+                        Agosto 4 de 2021
+                    </p>
+                    <div class="article_stars">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
                     </div>
                 </div>
-            </article>
+                <div class="user_text_review">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
+                        corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
+                        voluptatum saepe omnis fugit!
+                    </p>
+                </div>
+            </div>
+        </article>
     </section>
     <footer>
         <section class="footer_right">
@@ -241,4 +250,5 @@
         </div>
     </footer>
 </body>
+
 </html>
