@@ -8,33 +8,34 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/shop_styles.css">
     <title>MichoTec - Compra</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav_bar">
-            <div class="img_input">
-                <img src="imagenes/MichoTec logo.png" class="logo">
-            </div>
-            <input type="search" placeholder="Buscar producto" class="search">
-            <div class="items_container">
-                <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" class="responsive_button" />
-                <div class="items">
-                    <ul class="items_ul">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="">Acerca de</a></li>
-                        <li><a href="shop.html">Compra</a></li>
-                        <li><a href="product.html">Productos</a></li>
-                        <li><a href="">Ayuda</a></li>
-                    </ul>
-                    <div class="cart">
-                        <img src="imagenes/carro.png" class="carrito">
-                        <p>Carrito</p>
-                    </div>
+    <header class="header bg-green-500">
+    <nav class="nav_bar w-full flex flex-row justify-between">
+        <div class="img_input flex items-center">
+            <img src="imagenes/MichoTec logo.png" class="logo w-32 ">
+        </div>
+        <input type="search" placeholder="Buscar producto" class="search self-center w-2/4 h-12 p-1.5">
+        <div class="items_container flex flex-row">
+            <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" class="responsive_button md:hidden lg:hidden" />
+            <div class="items flex flex-row items-center">
+                <ul class="items_ul flex flex-row gap-x-8 text-white">
+                    <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="index.html">Inicio</a></li>
+                    <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="">Acerca de</a></li>
+                    <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="shop.html">Compra</a></li>
+                    <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="product.html">Productos</a></li>
+                    <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="">Ayuda</a></li>
+                </ul>
+                <div class="cart flex flex-row items-center border-2 rounded-full ml-4 mr-2 px-3.5 py-1 bg-green-200">
+                    <img src="imagenes/carro.png" class="carrito w-12">
+                    <p class="mx-4">Carrito</p>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
     <section class="section_busqueda">
         <div class="title">¡Busca tu producto!</div>
         <div class="input_busqueda">
