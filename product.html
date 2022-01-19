@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <title>MichoTec - Producto</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header class="header bg-green-500">
+<body class="bg-gradient-to-b from-blue-500 to-blue-800">
+    <header class="header bg-blue-800">
         <nav class="nav_bar w-full flex flex-row justify-between">
             <div class="img_input flex items-center">
                 <img src="imagenes/MichoTec logo.png" class="logo w-32 ">
@@ -29,7 +30,7 @@
                         <li class="border-2 rounded-tl-xl rounded-br-xl p-2 hover:rounded-xl"><a href="product.html">Productos</a></li>
                         <li class="border-2 rounded-tl-xl rounded-br-xl p-2 hover:rounded-xl"><a href="">Ayuda</a></li>
                     </ul>
-                    <div class="cart flex flex-row items-center border-2 rounded-full ml-4 mr-2 px-3.5 py-1 bg-green-200">
+                    <div class="cart flex flex-row items-center border-2 rounded-full ml-4 mr-2 px-3.5 py-1 bg-blue-400">
                         <img src="imagenes/carro.png" class="carrito w-12">
                         <p class="mx-4">Carrito</p>
                     </div>
@@ -38,16 +39,16 @@
         </nav>
     </header>
     <section class="image_principal">
-        <div class="producto">
-            <div class="photo_container">
-                <img class="product_photo" src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
+        <div class="producto grid grid-cols-2 items-center border border-white">
+            <div class="photo_container border-r-white border">
+                <img class="product_photo h-128" src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
             </div>
             <div class="info_container">
-                <div class="info_title">
-                    <h1 class="product_title">
+                <div class="info_title ">
+                    <h1 class="product_title font-sans font-bold text-4xl text-center my-3">
                         Titulo de producto
                     </h1>
-                    <div class="info_stars">
+                    <div class="info_stars flex items-center justify-center m-3">
                         <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
                         <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
                         <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
@@ -55,22 +56,22 @@
                         <img class="star" src="./Imagenes producto/iconmonstr-star-thin.svg">
 
                     </div>
-                    <p class="info_review">
+                    <p class="info_review text-center text-lg mb-10">
                         5 Reviews
                     </p>
                 </div>
                 <div class="info_description">
-                    <p class="product_description">
+                    <p class="product_description text-3xl p-4 text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae vero tenetur temporibus
                         incidunt recusandae! Provident, repellat molestiae consequuntur asperiores a similique
                         reiciendis maxime sint optio est fugiat veniam consectetur.
                     </p>
                 </div>
-                <div class="info_buy">
-                    <a class="buy_button">
+                <div class="info_buy text-center m-4">
+                    <a href="" class="buy_button border-2 text-white border-white bg-blue-900 font-sans font-semibold text-xl p-2 rounded-xl transition hover:bg-blue-400" >
                         Comprar Ahora
                     </a>
-                    <p class="product_price">
+                    <p class="product_price text-2xl pt-2">
                         $1000
                     </p>
                 </div>
@@ -80,21 +81,20 @@
     <section class="similar_products">
         <div class="photo_columns">
             <div class="photo_title">
-                <h3 class="name_photo_title">
+                <h3 class="name_photo_title text-4xl text-center font-sans font-bold m-4">
                     Similar Products
                 </h3>
             </div>
-            <div class="article_container">
-                <article class="article_one">
-                    <div class="photo_one">
-                        <img class="image_one"
-                            src="./Imagenes producto/componentes-de-una-computadora-hardware-interno-motherboard-e1575462591528.jpg">
+            <div class="article_container grid grid-cols-3 gap-2">
+                <article class="article_one border border-white">
+                    <div class="photo_one flex items-center justify-center">
+                        <img class="image_one w-full" src="./Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
                     </div>
                     <div class="photo_info_title">
-                        <h2 class="photo_product_title">
+                        <h2 class="photo_product_title text-xl font-sans font-bold text-center">
                             Titulo de producto
                         </h2>
-                        <div class="article_stars">
+                        <div class="article_stars flex items-center justify-center m-1">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
@@ -102,20 +102,20 @@
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
 
                         </div>
-                        <p class="article_review">
+                        <p class="article_review text-lg text-center">
                             $5000
                         </p>
                     </div>
                 </article>
-                <article class="article_one">
-                    <div class="photo_one">
-                        <img class="image_one" src="./Imagenes producto/componentes.jpg">
+                <article class="article_one border border-white">
+                    <div class="photo_one flex items-center justify-center">
+                        <img class="image_one w-full h-128" src="./Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
                     </div>
                     <div class="photo_info_title">
-                        <h2 class="photo_product_title">
+                        <h2 class="photo_product_title text-xl font-sans font-bold text-center">
                             Titulo de producto
                         </h2>
-                        <div class="article_stars">
+                        <div class="article_stars flex items-center justify-center m-1">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
@@ -123,20 +123,20 @@
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
 
                         </div>
-                        <p class="article_review">
-                            $4500
+                        <p class="article_review text-lg text-center">
+                            $5000
                         </p>
                     </div>
                 </article>
-                <article class="article_one">
-                    <div class="photo_one">
-                        <img class="image_one" src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
+                <article class="article_one border border-white">
+                    <div class="photo_one flex items-center justify-center">
+                        <img class="image_one w-full" src="./Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
                     </div>
                     <div class="photo_info_title">
-                        <h2 class="photo_product_title">
+                        <h2 class="photo_product_title text-xl font-sans font-bold text-center">
                             Titulo de producto
                         </h2>
-                        <div class="article_stars">
+                        <div class="article_stars flex items-center justify-center m-1">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
@@ -144,8 +144,8 @@
                             <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
 
                         </div>
-                        <p class="article_review">
-                            $10000
+                        <p class="article_review text-lg text-center">
+                            $5000
                         </p>
                     </div>
                 </article>
@@ -155,23 +155,23 @@
 
     <section class="reviews">
         <article class="review_article">
-            <div class="review_article_title">
+            <div class="review_article_title text-4xl font-sans font-bold m-8">
                 <h2 class="review_title">
                     Review
                 </h2>
             </div>
-            <div class="user_container">
+            <div class="user_container border border-white flex">
                 <div class="user_review">
-                    <img class="user_small" src="./Imagenes producto/iconmonstr-user-6.svg">
+                    <img class="user_small h-52 p-10" src="./Imagenes producto/iconmonstr-user-6.svg">
                 </div>
-                <div class="usser_revier">
-                    <p class="name_review">
-                        <b>Jhon Cena</b>
+                <div class="usser_revier p-4 ">
+                    <p class="name_review text-center text-2xl font-sans font-bold ">
+                        Jhon Cena
                     </p>
-                    <p class="first_review">
+                    <p class="first_review text-center">
                         Agosto 4 de 2021
                     </p>
-                    <div class="article_starss">
+                    <div class="article_starss items-center justify-center flex">
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
@@ -179,7 +179,7 @@
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
                     </div>
                 </div>
-                <div class="user_text_review">
+                <div class="user_text_review text-2xl flex items-center m-4 font-sans">
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
                         corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
@@ -190,18 +190,18 @@
 
         </article>
         <article class="review_article">
-            <div class="user_container2">
+            <div class="user_container2 border border-white flex">
                 <div class="user_review">
-                    <img class="user_small" src="./Imagenes producto/iconmonstr-user-6.svg">
+                    <img class="user_small h-52 p-10" src="./Imagenes producto/iconmonstr-user-6.svg">
                 </div>
-                <div class="usser_revier">
-                    <p class="name_review">
-                        <b>Mariana Cena</b>
+                <div class="usser_revier p-4 ">
+                    <p class="name_review text-center text-2xl font-sans font-bold ">
+                        Mariana Cena
                     </p>
-                    <p class="first_review">
+                    <p class="first_review text-center">
                         Agosto 4 de 2021
                     </p>
-                    <div class="article_starss">
+                    <div class="article_starss items-center justify-center flex">
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
@@ -209,7 +209,7 @@
                         <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
                     </div>
                 </div>
-                <div class="user_text_review">
+                <div class="user_text_review text-2xl flex items-center m-4 font-sans">
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
                         corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
@@ -219,6 +219,7 @@
             </div>
         </article>
     </section>
+    
     <footer>
         <section class="footer_right">
             <div class="div_address">
