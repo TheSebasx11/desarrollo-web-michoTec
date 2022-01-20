@@ -39,9 +39,9 @@
         </nav>
     </header>
     <section class="image_principal">
-        <div class="producto grid grid-cols-2 items-center border border-white">
+        <div class="producto md:grid md:grid-cols-2 items-center border border-white">
             <div class="photo_container border-r-white border">
-                <img class="product_photo h-128" src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
+                <img class="product_photo h-128 " src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
             </div>
             <div class="info_container">
                 <div class="info_title ">
@@ -61,7 +61,7 @@
                     </p>
                 </div>
                 <div class="info_description">
-                    <p class="product_description text-3xl p-4 text-justify">
+                    <p class="product_description sm:text-left text-xl md:text-3xl p-4 text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae vero tenetur temporibus
                         incidunt recusandae! Provident, repellat molestiae consequuntur asperiores a similique
                         reiciendis maxime sint optio est fugiat veniam consectetur.
@@ -85,7 +85,7 @@
                     Similar Products
                 </h3>
             </div>
-            <div class="article_container grid grid-cols-3 gap-2">
+            <div class="article_container md:grid grid-cols-3 gap-2">
                 <article class="article_one border border-white">
                     <div class="photo_one flex items-center justify-center">
                         <img class="image_one w-full" src="./Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
@@ -155,43 +155,8 @@
 
     <section class="reviews">
         <article class="review_article">
-            <div class="review_article_title text-4xl font-sans font-bold m-8">
-                <h2 class="review_title">
-                    Review
-                </h2>
-            </div>
-            <div class="user_container border border-white flex">
-                <div class="user_review">
-                    <img class="user_small h-52 p-10" src="./Imagenes producto/iconmonstr-user-6.svg">
-                </div>
-                <div class="usser_revier p-4 ">
-                    <p class="name_review text-center text-2xl font-sans font-bold ">
-                        Jhon Cena
-                    </p>
-                    <p class="first_review text-center">
-                        Agosto 4 de 2021
-                    </p>
-                    <div class="article_starss items-center justify-center flex">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                    </div>
-                </div>
-                <div class="user_text_review text-2xl flex items-center m-4 font-sans">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
-                        corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
-                        voluptatum saepe omnis fugit!
-                    </p>
-                </div>
-            </div>
-
-        </article>
-        <article class="review_article">
-            <div class="user_container2 border border-white flex">
-                <div class="user_review">
+            <div class="user_container2 md:flex border lg:grid xl:flex">
+                <div class="user_review flex justify-center items-center">
                     <img class="user_small h-52 p-10" src="./Imagenes producto/iconmonstr-user-6.svg">
                 </div>
                 <div class="usser_revier p-4 ">
@@ -210,7 +175,36 @@
                     </div>
                 </div>
                 <div class="user_text_review text-2xl flex items-center m-4 font-sans">
-                    <p>
+                    <p class="text-center md:text-left lg:text-center xl:text-left">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
+                        corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
+                        voluptatum saepe omnis fugit!
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article class="review_article">
+            <div class="user_container md:flex border lg:grid xl:flex">
+                <div class="user_review flex justify-center items-center">
+                    <img class="user_small h-52 p-10" src="./Imagenes producto/iconmonstr-user-6.svg">
+                </div>
+                <div class="usser_revier p-4 ">
+                    <p class="name_review text-center text-2xl font-sans font-bold ">
+                        Jhon Cena
+                    </p>
+                    <p class="first_review text-center">
+                        Agosto 4 de 2021
+                    </p>
+                    <div class="article_starss items-center justify-center flex">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                    </div>
+                </div>
+                <div class="user_text_review text-2xl flex items-center m-4 font-sans">
+                    <p class="text-center md:text-left lg:text-center xl:text-left">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
                         corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
                         voluptatum saepe omnis fugit!
@@ -220,33 +214,33 @@
         </article>
     </section>
     
-    <footer class="flex justify-center items-center grid-cols-2 gap-10">
+    <footer class="md:flex justify-center items-center grid-cols-2 gap-10">
         <section class="footer_right">
             <div class="div_address flex justify-center items-center my-4">
                 <img class="border-2 border-white" src="imagenes/Pr.png" alt="">
             </div>
             <div class="div_address_name flex justify-center items-center text-white font-sans font-bold"><p>Planeta Rica, Cordoba, Colombia</p></div>
         </section>
-        <section class="contact">
+        <section class="contact flex flex-col justify-center">
             <p class="title text-white font-bold text-xl text-center">¿Dudas? Escribenos</p>
-            <button class="border ">Enviar</button>
-            <div class="inputs border-2 border-white ">
-                <input type="text" placeholder="Ingresa tu nombre" class="name_input" id="">
-                <input type="email" placeholder="Ingresa tu Email" class="email_input">
+            <div class="inputs flex flex-col px-4 pb-2">
+                <input type="text" placeholder="Ingresa tu nombre" class="name_input mb-4" id="">
+                <input type="email" placeholder="Ingresa tu Email" class="email_input mb-4">
                 <textarea name="" placeholder="Describenos tu mensaje" class="message_input" cols="30"
                     rows="10"></textarea>
             </div>
+            <button class="text-white border-2 mx-4 mb-4 hover:bg-white hover:text-blue-700">Enviar</button>
         </section>
-        <div class="div_social_media border">
-            <ul class="">
-                <li><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook.png" />
-                    <a href="javascript:void(0)">Facebook</a>
+        <div class="div_social_media">
+            <ul class="flex justify-center mb-4 md:block">
+                <li class="flex justify-center items-center"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook.png" />
+                    <a class="mx-2 md:m-0" href="javascript:void(0)">Facebook</a>
                 </li>
-                <li><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
-                    <a href="javascript:void(0)">Instagram</a>
+                <li class="flex justify-center items-center"><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
+                    <a class="mx-2 md:m-0" href="javascript:void(0)">Instagram</a>
                 </li>
-                <li><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" />
-                    <a href="javascript:void(0)">Twitter</a>
+                <li class="flex justify-center items-center"><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" />
+                    <a class="mx-2 md:m-0" href="javascript:void(0)">Twitter</a>
                 </li>
             </ul>
         </div>
