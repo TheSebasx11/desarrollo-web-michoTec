@@ -14,24 +14,40 @@
 </head>
 
 <body class="bg-gradient-to-b from-blue-500 to-blue-800">
-    <header class="header bg-blue-800">
+    <header class="bg-blue-800">
         <nav class="nav_bar w-full flex flex-row justify-between">
             <div class="img_input flex items-center">
                 <img src="imagenes/MichoTec logo.png" class="logo w-32 ">
             </div>
             <input type="search" placeholder="Buscar producto" class="search self-center w-3/6 h-9 px-4 mr-3">
-            <div class="items_container flex flex-row">
-                <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" class="responsive_button md:hidden lg:hidden" />
-                <div class="items flex flex-row items-center">
-                    <ul class="items_ul flex flex-row items-center gap-x-5 text-white">
-                        <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="index.html">Inicio</a></li>
-                        <li class="w-24 border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="">Acerca de</a></li>
-                        <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="shop.html">Compra</a></li>
-                        <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="product.html">Productos</a></li>
-                        <li class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110"><a href="">Ayuda</a></li>
+            <div class="items_container flex flex-row items-center  w-fit">
+                <img id="buttom-menu" onclick="desplegar()" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
+                    class="w-10 object-cover mr-4 lg:hidden" />
+                <div id="menu" class="lg:flex lg:flex-row lg:items-center lg:static lg:gap-x-2 absolute left-0 -top-120 w-30 py-4 pr-3 gap-y-3 flex flex-col bg-blue-800 rounded-xl">
+                    <ul class="lg:flex lg:w-fit lg:flex-row lg:items-center lg:gap-x-5 text-white flex flex-col w-28 pl-3 gap-y-2">
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/index.html">Inicio</a>
+                        </li>
+                        <li
+                            class="w-24 border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="">Acerca de</a>
+                        </li>
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/shop.html">Compra</a>
+                        </li>
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/product.html">Productos</a>
+                        </li>
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/add.html">Añadir</a>
+                        </li>
                     </ul>
                     <div class="cart flex flex-row items-center border-2 rounded-full h-12 mx-3 px-4 w-28 bg-blue-400">
-                        <img src="imagenes/carro.png" class="carrito w-7">
+                        <img src="../imagenes/carro.png" class="carrito w-7">
                         <p class="mx-2">Carrito</p>
                     </div>
                 </div>
@@ -41,7 +57,8 @@
     <section class="image_principal">
         <div class="producto md:grid md:grid-cols-2 items-center border border-white">
             <div class="photo_container border-r-white border">
-                <img class="product_photo h-128 " src="./Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
+                <img class="product_photo h-128 " src="../Imagenes producto/casper-johansson-KDIHqGWlvOc-unsplash.jpg">
+
             </div>
             <div class="info_container">
                 <div class="info_title ">
@@ -49,11 +66,11 @@
                         Titulo de producto
                     </h1>
                     <div class="info_stars flex items-center justify-center m-3">
-                        <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                        <img class="star" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star" src="../Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star" src="../Imagenes producto/iconmonstr-star-thin.svg">
 
                     </div>
                     <p class="info_review text-center text-lg mb-10">
@@ -68,7 +85,8 @@
                     </p>
                 </div>
                 <div class="info_buy text-center m-4">
-                    <a href="" class="buy_button border-2 text-white border-white bg-blue-900 font-sans font-semibold text-xl p-2 rounded-xl transition hover:bg-blue-400" >
+                    <a href=""
+                        class="buy_button border-2 text-white border-white bg-blue-900 font-sans font-semibold text-xl p-2 rounded-xl transition hover:bg-blue-400">
                         Comprar Ahora
                     </a>
                     <p class="product_price text-2xl pt-2">
@@ -88,18 +106,18 @@
             <div class="article_container md:grid grid-cols-3 gap-2">
                 <article class="article_one border border-white">
                     <div class="photo_one flex items-center justify-center">
-                        <img class="image_one w-full" src="./Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
+                        <img class="image_one w-full" src="../Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
                     </div>
                     <div class="photo_info_title">
                         <h2 class="photo_product_title text-xl font-sans font-bold text-center">
                             Titulo de producto
                         </h2>
                         <div class="article_stars flex items-center justify-center m-1">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
 
                         </div>
                         <p class="article_review text-lg text-center">
@@ -109,18 +127,19 @@
                 </article>
                 <article class="article_one border border-white">
                     <div class="photo_one flex items-center justify-center">
-                        <img class="image_one w-full h-128" src="./Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
+                        <img class="image_one w-full h-128"
+                            src="../Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
                     </div>
                     <div class="photo_info_title">
                         <h2 class="photo_product_title text-xl font-sans font-bold text-center">
                             Titulo de producto
                         </h2>
                         <div class="article_stars flex items-center justify-center m-1">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
 
                         </div>
                         <p class="article_review text-lg text-center">
@@ -130,18 +149,18 @@
                 </article>
                 <article class="article_one border border-white">
                     <div class="photo_one flex items-center justify-center">
-                        <img class="image_one w-full" src="./Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
+                        <img class="image_one w-full" src="../Imagenes producto/4a77e4804d7b8066298ee7da2bde52fc.jpg">
                     </div>
                     <div class="photo_info_title">
                         <h2 class="photo_product_title text-xl font-sans font-bold text-center">
                             Titulo de producto
                         </h2>
                         <div class="article_stars flex items-center justify-center m-1">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                            <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
+                            <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
 
                         </div>
                         <p class="article_review text-lg text-center">
@@ -157,7 +176,7 @@
         <article class="review_article">
             <div class="user_container2 md:flex border lg:grid xl:flex">
                 <div class="user_review flex justify-center items-center">
-                    <img class="user_small h-52 p-10" src="./Imagenes producto/iconmonstr-user-6.svg">
+                    <img class="user_small h-52 p-10" src="../Imagenes producto/iconmonstr-user-6.svg">
                 </div>
                 <div class="usser_revier p-4 ">
                     <p class="name_review text-center text-2xl font-sans font-bold ">
@@ -167,11 +186,11 @@
                         Agosto 4 de 2021
                     </p>
                     <div class="article_starss items-center justify-center flex">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
                     </div>
                 </div>
                 <div class="user_text_review text-2xl flex items-center m-4 font-sans">
@@ -186,7 +205,7 @@
         <article class="review_article">
             <div class="user_container md:flex border lg:grid xl:flex">
                 <div class="user_review flex justify-center items-center">
-                    <img class="user_small h-52 p-10" src="./Imagenes producto/iconmonstr-user-6.svg">
+                    <img class="user_small h-52 p-10" src="../Imagenes producto/iconmonstr-user-6.svg">
                 </div>
                 <div class="usser_revier p-4 ">
                     <p class="name_review text-center text-2xl font-sans font-bold ">
@@ -196,11 +215,11 @@
                         Agosto 4 de 2021
                     </p>
                     <div class="article_starss items-center justify-center flex">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-3.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
-                        <img class="star_small" src="./Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-3.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
+                        <img class="star_small" src="../Imagenes producto/iconmonstr-star-thin.svg">
                     </div>
                 </div>
                 <div class="user_text_review text-2xl flex items-center m-4 font-sans">
@@ -213,13 +232,15 @@
             </div>
         </article>
     </section>
-    
+
     <footer class="md:flex justify-center items-center grid-cols-2 gap-10">
         <section class="footer_right">
             <div class="div_address flex justify-center items-center my-4">
-                <img class="border-2 border-white" src="imagenes/Pr.png" alt="">
+                <img class="border-2 border-white" src="../imagenes/Pr.png" alt="">
             </div>
-            <div class="div_address_name flex justify-center items-center text-white font-sans font-bold"><p>Planeta Rica, Cordoba, Colombia</p></div>
+            <div class="div_address_name flex justify-center items-center text-white font-sans font-bold">
+                <p>Planeta Rica, Cordoba, Colombia</p>
+            </div>
         </section>
         <section class="contact flex flex-col justify-center">
             <p class="title text-white font-bold text-xl text-center">¿Dudas? Escribenos</p>
@@ -233,13 +254,16 @@
         </section>
         <div class="div_social_media">
             <ul class="flex justify-center mb-4 md:block">
-                <li class="flex justify-center items-center"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook.png" />
+                <li class="flex justify-center items-center"><img
+                        src="https://img.icons8.com/ios-glyphs/30/000000/facebook.png" />
                     <a class="mx-2 md:m-0" href="javascript:void(0)">Facebook</a>
                 </li>
-                <li class="flex justify-center items-center"><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
+                <li class="flex justify-center items-center"><img
+                        src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
                     <a class="mx-2 md:m-0" href="javascript:void(0)">Instagram</a>
                 </li>
-                <li class="flex justify-center items-center"><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" />
+                <li class="flex justify-center items-center"><img
+                        src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" />
                     <a class="mx-2 md:m-0" href="javascript:void(0)">Twitter</a>
                 </li>
             </ul>

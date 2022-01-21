@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MichoTec</title>
+    <link rel="shortcut icon" href="imagenes/MichoTec logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <header class="bg-blue-800">
+        <nav class="nav_bar w-full flex flex-row justify-between">
+            <div class="img_input flex items-center">
+                <img src="../imagenes/MichoTec logo.png" class="logo w-32 ">
+            </div>
+            <input type="search" placeholder="Buscar producto" class="search self-center w-3/6 h-9 px-4 mr-3">
+            <div class="items_container flex flex-row items-center  w-fit">
+                <img id="buttom-menu" onclick="desplegar()" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
+                    class="w-10 object-cover mr-4 lg:hidden" />
+                <div id="menu" class="lg:flex lg:flex-row lg:items-center lg:static lg:gap-x-2 absolute left-0 -top-120 w-30 py-4 pr-3 gap-y-3 flex flex-col bg-blue-800 rounded-xl">
+                    <ul class="lg:flex lg:w-fit lg:flex-row lg:items-center lg:gap-x-5 text-white flex flex-col w-28 pl-3 gap-y-2">
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/index.html">Inicio</a>
+                        </li>
+                        <li
+                            class="w-24 border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="">Acerca de</a>
+                        </li>
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/shop.html">Compra</a>
+                        </li>
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/product.html">Productos</a>
+                        </li>
+                        <li
+                            class="border-2 rounded-tl-xl rounded-br-xl p-2 transition hover:rounded-xl hover:scale-110">
+                            <a href="/html/add.html">Añadir</a>
+                        </li>
+                    </ul>
+                    <div class="cart flex flex-row items-center border-2 rounded-full h-12 mx-3 px-4 w-28 bg-blue-400">
+                        <img src="../imagenes/carro.png" class="carrito w-7">
+                        <p class="mx-2">Carrito</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="bg-blue-700 flex flex-wrap">
+        <article class="w-full">
+            <div class="">
+                <h1 class="text-center text-4xl h-32 flex items-center justify-center">
+                    Bienvenido a nuestra tienda Online!
+                </h1>
+            </div>
+            <div class="flex items-center justify-center gap-x-4">
+                <div class="w-100 flex flex-col items-center my-1 p-2">
+                    <img class="w-80" src="https://www.interfaz.com.mx/wp-content/uploads/2020/07/600x400.png">
+                    <p class="w-4/5 text-center mt-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aspernatur nesciunt,
+                        eius maxime sed explicabo pariatur sunt! Velit provident enim magni placeat iure quasi at
+                        adipisci ut eius? Suscipit, rem?
+                    </p>
+                </div>
+                <div class="w-100 flex flex-col items-center my-1 p-2">
+                    <img class="w-80" src="https://www.interfaz.com.mx/wp-content/uploads/2020/07/600x400.png">
+                    <p class="w-4/5 text-center mt-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aspernatur nesciunt,
+                        eius maxime sed explicabo pariatur sunt! Velit provident enim magni placeat iure quasi at
+                        adipisci ut eius? Suscipit, rem?
+                    </p>
+                </div>
+                <div class="w-100 flex flex-col items-center my-1 p-2">
+                    <img class="w-80" src="https://www.interfaz.com.mx/wp-content/uploads/2020/07/600x400.png">
+                    <p class="w-4/5 text-center mt-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aspernatur nesciunt,
+                        eius maxime sed explicabo pariatur sunt! Velit provident enim magni placeat iure quasi at
+                        adipisci ut eius? Suscipit, rem?
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article class="w-full bg-blue-600">
+            <div class="flex flex-col ">
+                <h2 class="text-center text-4xl h-32 flex items-center justify-center">
+                    Productos destacados
+                </h2>
+                <div class=" flex items-center gap-x-10 justify-center ">
+                    <svg class="transition hover:scale-125" xmlns=" http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1);">
+                    <path
+                        d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z">
+                    </path>
+                    </svg>
+                    <section class="flex gap-x-14">
+                        <div class="product_item_featured">
+                            <img class="w-100 object-cover"
+                                src="https://www.interfaz.com.mx/wp-content/uploads/2020/07/600x400.png">
+                            <p class="product_name text-center">
+                                Product name<br>
+                                $300
+                            </p>
+                        </div>
+                        <div class="product_item_featured">
+                            <img class="w-100" src="https://www.interfaz.com.mx/wp-content/uploads/2020/07/600x400.png">
+                            <p class="product_name text-center">
+                                Product name<br>
+                                $500
+                            </p>
+                        </div>
+                    </section>
+                    <svg class="transition hover:scale-125" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1);">
+                        <path
+                            d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z">
+                        </path>
+                    </svg>
+            </div>
+            </div>
+        </article>
+    </section>
+    <section class="bg-blue-500">
+        <div class=" flex flex-col items-center justify-center text-center">
+            <p class="title text-4xl my-5">
+                Announcement
+            </p>
+            <p class="announcement_text w-5/6 my-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci magni nulla rerum architecto dolor
+                dicta.
+                Impedit amet at necessitatibus ut, fuga illo magnam ad quisquam quasi nemo exercitationem quas mollitia?
+            </p>
+        </div>
+    </section>
+    <section class="bg-blue-400 flex justify-center">
+        <div class="big_img flex flex-col items-center justify-center">
+            <img src="../imagenes/descargar.png" class="w-100 mr-10 object-cover">
+            <p class="product_name text-center">
+                Product <br>
+                $300
+            </p>
+        </div>
+        <div class="">
+            <section class="flex flex-row items-center justify-center">
+                <div class="border border-black small_img text-center mx-4 my-3">
+                    <img src="../imagenes/descargar.png" class="w-64 border-black border">
+                    <p>
+                        Product name<br>
+                        $300
+                    </p>
+                </div>
+                <div class="border border-black small_img text-center mx-4 my-3">
+                    <img src="../imagenes/descargar.png" class="w-64 border-black border">
+                    <p>
+                        Product name<br>
+                        $300
+                    </p>
+                </div>
+            </section>
+            <section class="column flex flex-row items-center justify-center">
+                <div class="border border-black small_img text-center mx-4 my-3">
+                    <img src="../imagenes/descargar.png" class="w-64 border-black border">
+                    <p>
+                        Product name<br>
+                        $300
+                    </p>
+                </div>
+                <div class="border border-black small_img text-center mx-4 my-3">
+                    <img src="../imagenes/descargar.png" class="w-64 border-black border">
+                    <p>
+                        Product name<br>
+                        $300
+                    </p>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="bg-blue-300  flex flex-col items-center justify-center text-center">
+        <p class="title text-4xl mt-10">Nuestra tienda</p>
+        <p class="about_us w-9/12 h-32 text flex items-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laborum deserunt officiis sed
+            saepe quasi doloremque ea impedit veniam, odit magni, quos cupiditate. Facilis expedita libero
+            doloremque consequuntur, nihil minima doloribus.</p>
+    </section>
+    <footer class=" pt-4 flex flex-row w-full justify-between bg-blue-800">
+        <section class="footer_right">
+            <div class="div_address flex justify-center items-center my-4">
+                <img class="border-2 border-white" src="../imagenes/Pr.png" alt="">
+            </div>
+            <div class="div_address_name flex justify-center items-center text-white font-sans font-bold"><p>Planeta Rica, Cordoba, Colombia</p></div>
+        </section>
+        <section class="flex flex-col w-1/2 gap-y-2 p-2 border border-black items-center">
+            <p class="title">¿Dudas? Escribenos</p>
+            <button
+                class="border-2 w-20 border-black rounded-tl-xl rounded-br-xl p-2 transition bg-blue-700 text-white hover:rounded-xl hover:scale-110">Enviar</button>
+            <div class="inputs flex flex-col items-center w-full gap-y-2">
+                <input type="text" placeholder="Ingresa tu nombre" class="w-11/12 border-gray-500 border" id="">
+                <input type="email" placeholder="Ingresa tu Email" class="w-11/12 border-gray-500 border">
+                <textarea name="" placeholder="Describenos tu mensaje"
+                    class="resize-none w-11/12 h-40 border-gray-500 border" cols="30" rows="10"></textarea>
+            </div>
+        </section>
+        <div class="mb-5 mr-7 w-1/6 h-fit flex flex-row self-end justify-center ">
+            <ul class="lg:flex lg:flex-row lg:gap-x-2">
+                <li class="flex flex-col items-center pt-2 px-2 transition hover:scale-110 hover:bg-blue-900 hover:text-white"><img class="w-8"
+                        src="https://img.icons8.com/ios-glyphs/30/000000/facebook.png" />
+                    <a href="javascript:void(0)">Facebook</a>
+                </li>
+                <li class="flex flex-col items-center pt-2 px-2 transition hover:scale-110 hover:bg-[#EFBD5C]"><img class="w-8"
+                        src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
+                    <a href="javascript:void(0)">Instagram</a>
+                </li>
+                <li class="flex flex-col items-center px-2 transition hover:scale-110 hover:bg-blue-500 pt-2"><img class="w-8"
+                        src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png" />
+                    <a href="javascript:void(0)">Twitter</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>
