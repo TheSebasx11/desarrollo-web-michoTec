@@ -692,6 +692,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 18rem;
 }
 
+.w-52 {
+  width: 13rem;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -1199,6 +1203,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 1280px) {
   .xl\:flex {
     display: flex;
+  }
+
+  .xl\:p-5 {
+    padding: 1.25rem;
   }
 
   .xl\:text-left {
