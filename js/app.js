@@ -428,6 +428,7 @@ function RegistrarProductos() {
 AgregarProducto = async () => {
   const div = document.getElementById("modal");
   const element = document.createElement("div");
+  div.className = "block";
   let html = `<div class="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
   <div class="bg-white px-16 py-14 rounded-md text-center">
   <section class="product_container">
@@ -542,6 +543,7 @@ EditarUsuario = async (id) => {
 EditarProducto = async (id) => {
   const div = document.getElementById("modal");
   const element = document.createElement("div");
+  div.className = "block";
   const product = await ApiControl.getProductById(id);
   let html = `<div class="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
   <div class="bg-white px-16 py-14 rounded-md text-center">
