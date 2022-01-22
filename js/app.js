@@ -353,7 +353,7 @@ AgregarUsuario = async () => {
   const divApp = document.getElementById("modal");
   const element = document.createElement("div");
   divApp.className = "block";
-
+  ocultar();
   let html = `<div class="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
   <div class="bg-white px-16 py-14 rounded-md text-center">
   <section class="user_info_container">
@@ -385,10 +385,10 @@ AgregarUsuario = async () => {
       <input id="postal_i" class="border-2 border-black w-72" type="postaltext">
     </div>
     <div class="button_class mx-4 mb-2 flex flex-row">
-      <button onclick="closeModal()" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 hover:bg-red-500 hover:text-white transition">
+      <button onclick="closeModal(); ocultar();" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 hover:bg-red-500 hover:text-white transition">
           Cancelar
       </button>
-      <button onclick="RegistrarUser()" class="register px-4 ml-20 border-2 border-black font-semibold bg-white p-1 hover:bg-blue-400 hover:text-white transition">
+      <button onclick="RegistrarUser(); ocultar();" class="register px-4 ml-20 border-2 border-black font-semibold bg-white p-1 hover:bg-blue-400 hover:text-white transition">
           Registrar
       </button>
   </div>
@@ -429,6 +429,7 @@ AgregarProducto = async () => {
   const div = document.getElementById("modal");
   const element = document.createElement("div");
   div.className = "block";
+  ocultar();
   let html = `<div class="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
   <div class="bg-white px-16 py-14 rounded-md text-center">
   <section class="product_container">
@@ -456,10 +457,10 @@ AgregarProducto = async () => {
             <input id="stock_p" class="border-2 mb-2 border-black w-72" type="stockproduct">
         </div>
         <div class="button_class mx-4 mb-2">
-            <button onclick="closeModal()" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 transition hover:bg-red-500 hover:text-white">
+            <button onclick="closeModal(); ocultar();" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 transition hover:bg-red-500 hover:text-white">
                 Cancelar
             </button>
-            <button onclick="RegistrarProductos()" class="register ml-20 px-4 border-2 border-black font-semibold bg-white p-1 transition hover:bg-blue-400 hover:text-white">
+            <button onclick="RegistrarProductos(); ocultar();" class="register ml-20 px-4 border-2 border-black font-semibold bg-white p-1 transition hover:bg-blue-400 hover:text-white">
                 Registrar
             </button>
         </div>
@@ -478,7 +479,7 @@ EditarUsuario = async (id) => {
   const divApp = document.getElementById("modal");
   const element = document.createElement("div");
   divApp.className = "block";
-
+  ocultar();
   let html = `<div class="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
     <div class="bg-white px-16 py-14 rounded-md text-center">
     <section class="user_info_container">
@@ -510,10 +511,10 @@ EditarUsuario = async (id) => {
         <input id="postal_i" class="border-2 border-black w-72" type="postaltext">
       </div>
       <div class="button_class mx-4 mb-2 flex flex-row">
-        <button onclick="closeModal()" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 hover:bg-red-500 hover:text-white transition">
+        <button onclick="closeModal(); ocultar();" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 hover:bg-red-500 hover:text-white transition">
             Cancelar
         </button>
-        <button onclick="EnviarUser(${id})" class="register px-4 ml-20 border-2 border-black font-semibold bg-white p-1 hover:bg-blue-400 hover:text-white transition">
+        <button onclick="EnviarUser(${id}); ocultar();" class="register px-4 ml-20 border-2 border-black font-semibold bg-white p-1 hover:bg-blue-400 hover:text-white transition">
             Editar
         </button>
     </div>
@@ -544,6 +545,7 @@ EditarProducto = async (id) => {
   const div = document.getElementById("modal");
   const element = document.createElement("div");
   div.className = "block";
+  ocultar();
   const product = await ApiControl.getProductById(id);
   let html = `<div class="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
   <div class="bg-white px-16 py-14 rounded-md text-center">
@@ -572,10 +574,10 @@ EditarProducto = async (id) => {
             <input id="stock_p" class="border-2 mb-2 border-black w-72" type="stockproduct">
         </div>
         <div class="button_class mx-4 mb-2">
-            <button onclick="closeModal()" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 transition hover:bg-red-500 hover:text-white">
+            <button onclick="closeModal(); ocultar();" class="cancel border-2 px-4 border-black font-semibold bg-white p-1 transition hover:bg-red-500 hover:text-white">
                 Cancelar
             </button>
-            <button onclick="EnviarProducto(${id})" class="register ml-20 px-4 border-2 border-black font-semibold bg-white p-1 transition hover:bg-blue-400 hover:text-white">
+            <button onclick="EnviarProducto(${id}); ocultar();" class="register ml-20 px-4 border-2 border-black font-semibold bg-white p-1 transition hover:bg-blue-400 hover:text-white">
                 Registrar
             </button>
         </div>

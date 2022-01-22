@@ -13,5 +13,16 @@ function desplegar() {
   }
 }
 
+var overflow = true;
+const body = document.getElementById("cuerpo");
+function ocultar() {
+  if (overflow) {
+    body.className="overflow-hidden";
+    overflow = false;
+  } else {
+    body.className="";
+    overflow = true;
+  }
+}
 
 
