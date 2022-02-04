@@ -1,26 +1,38 @@
 <template>
-  <div id="app" class="bg-orange-400">
-    <Card
-      image="https://caracoltv.brightspotcdn.com/dims4/default/499cced/2147483647/strip/true/crop/3770x2514+0+0/resize/1000x667!/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2F7f%2F97%2F02b9fe5d47dbba6bf22249340845%2F063-1181743558-1.jpg"
-      title="Hola Fabiañiño"
-    />
-    <Card :image="juan" title="aaa" />
+  <div id="app" class="w-full">
+    <div class="flex gap-x-2 w-full">
+      <router-link to = "/list" class="w-52 h-8 bg-indigo-500">Usuario</router-link>
+      <router-link to = "/about" class="bg-indigo-600">About</router-link>
+    </div>
+    <router-view/>
+
+    <!-- <Card :image = "juan" title="Hola Fabiañiño"/>-->
+    <!-- <Card :image="juan" title="Juan" /> -->
+     <!-- <listar-usuario/> -->
+   
   </div>
 </template>
 
 <script>
-import Card from "./components/Card.vue";
-import juan from "./assets/juan.jpg";
-import "../css/style.css"
+//import Card from "./components/Card.vue";
+//import ListarUsuario from "./components/ListarUsuario.vue"
+//import juan from "./assets/juan.jpg";
+
+import "../css/style.css";
 
 export default {
   name: "App",
   data: () => {
-    return { juan };
+    return { //juan
+    };
   },
   components: {
-    Card,
+    //ListarUsuario, 
   },
+  mounted (){
+    
+  },
+  
 };
 </script>
 
