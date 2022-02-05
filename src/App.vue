@@ -1,33 +1,35 @@
 <template>
   <div id="app" class="w-full">
     <div class="flex gap-x-2 w-full">
-      <router-link to = "/list" class="w-52 h-8 bg-indigo-500">Usuario</router-link>
-      <router-link to = "/about" class="bg-indigo-600">About</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/">Home</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/listUser" >Listar Usuario</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/addUser" >Agregar Usuario</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/listDist" >Listar Distribuidor</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/addDist" >Agregar Distribuidor</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/listPurch" >Listar Compra</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/addPurch" >Agregar Compra</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/listProd" >Listar Producto</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/addProd" >Agregar Producto</router-link>
+      <router-link class = "border-2 border-black py-1 w-fit" to = "/about" >About</router-link>
     </div>
     <router-view/>
 
-    <!-- <Card :image = "juan" title="Hola Fabiañiño"/>-->
-    <!-- <Card :image="juan" title="Juan" /> -->
-     <!-- <listar-usuario/> -->
    
   </div>
 </template>
 
 <script>
-//import Card from "./components/Card.vue";
-//import ListarUsuario from "./components/ListarUsuario.vue"
-//import juan from "./assets/juan.jpg";
 
 import "../css/style.css";
 
 export default {
   name: "App",
   data: () => {
-    return { //juan
+    return { 
     };
   },
   components: {
-    //ListarUsuario, 
+    
   },
   mounted (){
     
