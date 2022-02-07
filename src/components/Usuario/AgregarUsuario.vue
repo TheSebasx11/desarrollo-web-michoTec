@@ -1,5 +1,15 @@
 <template>
-  <div class="bg-whitepx-16 py-8 rounded-md flex justify-center text-center items-center">
+  <div
+    class="
+      bg-whitepx-16
+      py-8
+      rounded-md
+      flex
+      justify-center
+      text-center
+      items-center
+    "
+  >
     <section class="w-fit rounded-xl border border-black">
       <div class="user_tittle">
         <h1 class="text-3xl font-bold m-4">Datos del Usuario</h1>
@@ -7,14 +17,14 @@
       <div class="user_info mx-4 mb-4">
         <p class="name text-xl font-semibold">Nombre</p>
         <input
-          id="name_i"
+          v-model="name_i"
           class="border-2 mb-2 border-black w-72"
           type="textname"
           placeholder="Nombre del usuario"
         />
         <p class="email text-xl font-semibold">Correo</p>
         <input
-          id="email_i"
+          v-model="email_i"
           class="border-2 mb-2 border-black w-72"
           type="emailtext"
           placeholder="@example.com"
@@ -23,19 +33,19 @@
           Telefono de contacto
         </p>
         <input
-          id="phone_i"
+          v-model="phone_i"
           class="border-2 mb-2 border-black w-72"
           type="textcontact"
         />
         <p class="age text-xl font-semibold">Edad</p>
         <input
-          id="age_i"
+          v-model="age_i"
           class="border-2 mb-2 border-black w-72"
           type="textage"
         />
         <p class="postalcode text-xl font-semibold">Codigo postal</p>
         <input
-          id="postal_i"
+          v-model="postal_i"
           class="border-2 border-black w-72"
           type="postaltext"
         />
@@ -60,7 +70,10 @@
           Cancelar
         </button>
         <button
-          v-on:click="goList()"
+          v-on:click="
+            goList();
+            Registrar();
+          "
           class="
             register
             px-4
@@ -81,10 +94,39 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
+  data: () => {
+    return {
+      request: null,
+      name_i: "",
+      email_i: "",
+      phone_i: "",
+      age_i: "",
+      postal_i: "",
+    };
+  },
   methods: {
     goList() {
       this.$router.push("listUser");
+    },
+    createUser(id_, name_, email_, phone_, age_, postal_code_) {
+      var User = {
+        id: id_,
+        name: name_,
+        email: email_,
+        phone: phone_,
+        age: age_,
+        postal_code: postal_code_,
+      };
+      return User;
+    },
+    Registrar() {
+      let User = this.createUser(0, this.name_i, this.email_i, this.phone_i, this.age_i, this.postal_i);
+      axios
+        .post("https://61e762f3e32cd90017acbace.mockapi.io/User", User)
+        .then((response) => (this.request = response.status))
+        .catch((e) => console.log(e));
     },
   },
 };
