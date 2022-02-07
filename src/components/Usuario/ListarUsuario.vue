@@ -38,7 +38,16 @@
               Eliminar
             </button>
             <button
-              v-on:click="showAlert()"
+              v-on:click="
+                goEdit(
+                  user.id,
+                  user.name,
+                  user.email,
+                  user.phone,
+                  user.age,
+                  user.postal_code
+                )
+              "
               class="
                 bg-green-500
                 px-2
@@ -72,6 +81,19 @@ export default {
     this.getUsers();
   },
   methods: {
+    goEdit(id_, name_, email_, phone_, age_, postal_code_) {
+      this.$router.push({
+        name: "Editar User",
+        params: {
+          id: id_,
+          name: name_,
+          email: email_,
+          phone: phone_,
+          age: age_,
+          postal: postal_code_,
+        },
+      });
+    },
     getUsers() {
       axios
         .get("https://61e762f3e32cd90017acbace.mockapi.io/User")
@@ -109,10 +131,6 @@ export default {
           this.$swal("Eliminado!", "El registro ha sido borrado", "success");
         }
       });
-    },
-    showAlert() {
-      // Use sweetalert2
-      this.$swal('Hello Vue world!!!');
     },
   },
 };

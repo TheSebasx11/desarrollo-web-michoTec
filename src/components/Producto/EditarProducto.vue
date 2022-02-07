@@ -17,13 +17,15 @@
       <div class="product_data mx-4 mb-4">
         <p class="product_name text-xl font-semibold">Nombre del Producto</p>
         <input
-          v-model="name_p"
+          v-bind:value="name"
+          ref="name_p"
           class="border-2 mb-2 border-black w-72"
           type="nameproduct"
         />
         <p class="product_description text-xl font-semibold">Descripcion</p>
         <textarea
-          v-model="desc_p"
+          v-bind:value="description"
+          ref="desc_p"
           placeholder="Ingrese aqui la descripcion del producto"
           class="description border-2 mb-2 border-black resize-none w-72 h-32"
           cols="30"
@@ -31,13 +33,15 @@
         ></textarea>
         <p class="product_price text-xl font-semibold">Precio del Producto</p>
         <input
-          v-model="price_p"
+          v-bind:value="price"
+          ref="price_p"
           class="border-2 mb-2 border-black w-72"
           type="priceproduct"
         />
         <p class="product_stock text-xl font-semibold">Stock</p>
         <input
-          v-model="stock_p"
+          v-bind:value="stock"
+          ref="stock_p"
           class="border-2 mb-2 border-black w-72"
           type="stockproduct"
         />
@@ -60,7 +64,11 @@
           Cancelar
         </button>
         <button
-          v-on:click="Registrar();goList(); "
+          v-on:click="
+            Editar();
+            goList();
+            
+          "
           class="
             register
             ml-20
@@ -73,7 +81,7 @@
             hover:bg-blue-400 hover:text-white
           "
         >
-          Registrar
+          Editar
         </button>
       </div>
     </section>
@@ -83,13 +91,15 @@
 <script>
 import axios from "axios";
 export default {
+  props: {
+    id: String,
+    name: String,
+    description: String,
+    price: String,
+    stock: String,
+  },
   data: () => {
-    return {
-      name_p: "",
-      desc_p: "",
-      price_p: "",
-      stock_p: "",
-    };
+    return {};
   },
   methods: {
     goList() {
@@ -105,11 +115,17 @@ export default {
       };
       return Product;
     },
-    Registrar() {
-      let Product = this.createProduct(0, this.name_p, this.desc_p, this.price_p, this.stock_p);
+    Editar() {
+      let Product = this.createProduct(
+        0,
+        this.$refs.name_p.value,
+        this.$refs.desc_p.value,
+        this.$refs.price_p.value,
+        this.$refs.stock_p.value
+      );
       console.log(Product);
       axios
-        .post("https://61e762f3e32cd90017acbace.mockapi.io/Product", Product)
+        .put("https://61e762f3e32cd90017acbace.mockapi.io/Product/" + this.id, Product)
         .then((response) => (this.request = response.status))
         .catch((e) => console.log(e));
     },

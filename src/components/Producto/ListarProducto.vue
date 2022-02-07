@@ -30,7 +30,7 @@
           <td class="text-black border border-black p-2">
             <div class="flex flex-row justify-center items-center gap-x-2">
               <button
-                v-on:click="deleteProduct(product.id)"
+                v-on:click="showDeleteAlert(product.id)"
                 class="
                   bg-red-500
                   px-2
@@ -43,7 +43,15 @@
                 Eliminar
               </button>
               <button
-                onclick="EditarProducto(${element.id})"
+                v-on:click="
+                  goEdit(
+                    product.id,
+                    product.name,
+                    product.description,
+                    product.price,
+                    product.stock
+                  )
+                "
                 class="
                   bg-green-500
                   px-2
@@ -76,6 +84,18 @@ export default {
     this.getProducts();
   },
   methods: {
+    goEdit(id_, name_, description_, price_, stock_) {
+      this.$router.push({
+        name: "Editar Producto",
+        params: {
+          id: id_,
+          name: name_,
+          description: description_,
+          price: price_,
+          stock: stock_,
+        },
+      });
+    },
     getProducts() {
       axios
         .get("https://61e762f3e32cd90017acbace.mockapi.io/Product")
@@ -95,6 +115,23 @@ export default {
         }
       );
       this.getProducts();
+    },
+    showDeleteAlert(id) {
+      // Use sweetalert2
+      this.$swal({
+        title: "¿Estás seguro de hacerlo?",
+        text: "No podrás revertirlo!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, quiero borrarlo!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.deleteProduct(id);
+          this.$swal("Eliminado!", "El registro ha sido borrado", "success");
+        }
+      });
     },
   },
 };

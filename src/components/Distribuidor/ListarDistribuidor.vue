@@ -26,7 +26,7 @@
           <td class="text-black border border-black">
             <div class="flex flex-row justify-center items-center gap-x-2">
               <button
-                v-on:click="deleteDist(dist.id)"
+                v-on:click="showDeleteAlert(dist.id)"
                 class="
                   bg-red-500
                   px-2
@@ -39,7 +39,9 @@
                 Eliminar
               </button>
               <button
-                v-on:click="showAlert()"
+                v-on:click="
+                  goEdit(dist.id, dist.name, dist.equipment, dist.category)
+                "
                 onclick="EditarDistribuidores(${element.id})"
                 class="
                   bg-green-500
@@ -73,6 +75,17 @@ export default {
     this.getDist();
   },
   methods: {
+    goEdit(id, name, equipment, category) {
+      this.$router.push({
+        name: "Editar Distribuidores",
+        params: {
+          id: id,
+          name: name,
+          equipment: equipment,
+          category: category,
+        },
+      });
+    },
     getDist() {
       axios
         .get("https://61e762f3e32cd90017acbace.mockapi.io/Distributor")
@@ -93,7 +106,23 @@ export default {
       );
       this.getDist();
     },
-    
+    showDeleteAlert(id) {
+      // Use sweetalert2
+      this.$swal({
+        title: "¿Estás seguro de hacerlo?",
+        text: "No podrás revertirlo!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, quiero borrarlo!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.deleteDist(id);
+          this.$swal("Eliminado!", "El registro ha sido borrado", "success");
+        }
+      });
+    },
   },
 };
 </script>

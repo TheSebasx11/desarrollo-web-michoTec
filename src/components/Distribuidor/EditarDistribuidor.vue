@@ -11,38 +11,38 @@
     "
   >
     <section class="w-fit rounded-xl border border-black">
-      <div class="product_tittle">
-        <h2 class="text-3xl font-bold m-4">Registrar producto</h2>
+      <div class="distri_tittle">
+        <h2 class="text-3xl font-bold m-4">Datos del Distribuidor</h2>
       </div>
-      <div class="product_data mx-4 mb-4">
-        <p class="product_name text-xl font-semibold">Nombre del Producto</p>
+      <div class="distri_data mx-4 mb-4">
+        <p class="distri_name text-xl font-semibold">Nombre de la compañia</p>
         <input
-          v-model="name_p"
+          v-bind:value="name"
+          ref="d_name"
           class="border-2 mb-2 border-black w-72"
-          type="nameproduct"
+          type="namedistri"
         />
-        <p class="product_description text-xl font-semibold">Descripcion</p>
+        <p class="distri_description text-xl font-semibold">
+          Equipo distribuido
+        </p>
         <textarea
-          v-model="desc_p"
+          v-bind:value="equipment"
+          ref="d_equip"
+          name=""
           placeholder="Ingrese aqui la descripcion del producto"
-          class="description border-2 mb-2 border-black resize-none w-72 h-32"
+          class="p-2 description border-2 mb-1 border-black resize-none w-72"
           cols="30"
           rows="10"
         ></textarea>
-        <p class="product_price text-xl font-semibold">Precio del Producto</p>
+        <p class="distri_price text-xl font-semibold">Categorias</p>
         <input
-          v-model="price_p"
+          v-bind:value="category"
+          ref="d_category"
           class="border-2 mb-2 border-black w-72"
           type="priceproduct"
         />
-        <p class="product_stock text-xl font-semibold">Stock</p>
-        <input
-          v-model="stock_p"
-          class="border-2 mb-2 border-black w-72"
-          type="stockproduct"
-        />
       </div>
-      <div class="button_class mx-4 mb-2">
+      <div class="button_class mx-4 mb-10">
         <button
           v-on:click="goList()"
           class="
@@ -60,7 +60,10 @@
           Cancelar
         </button>
         <button
-          v-on:click="Registrar();goList(); "
+          v-on:click="
+            Registrar();
+            goList();
+          "
           class="
             register
             ml-20
@@ -73,7 +76,7 @@
             hover:bg-blue-400 hover:text-white
           "
         >
-          Registrar
+          Editar
         </button>
       </div>
     </section>
@@ -83,33 +86,34 @@
 <script>
 import axios from "axios";
 export default {
-  data: () => {
-    return {
-      name_p: "",
-      desc_p: "",
-      price_p: "",
-      stock_p: "",
-    };
+  props: {
+    id: String,
+    name: String,
+    equipment: String,
+    category: String
   },
   methods: {
     goList() {
-      this.$router.push("listProd");
+      this.$router.push("listDist");
     },
-    createProduct(id_, name_, description_, price_, stock_) {
-      var Product = {
-        id: id_,
-        name: name_,
-        description: description_,
-        price: price_,
-        stock: stock_,
+    createDistri(id, name, equipment, category) {
+      let Distri = {
+        id: id,
+        name: name,
+        equipment: equipment,
+        category: category,
       };
-      return Product;
+      return Distri;
     },
     Registrar() {
-      let Product = this.createProduct(0, this.name_p, this.desc_p, this.price_p, this.stock_p);
-      console.log(Product);
+      let distri = this.createDistri(
+        0,
+        this.$refs.d_name.value,
+        this.$refs.d_equip.value,
+        this.$refs.d_category.value
+      );
       axios
-        .post("https://61e762f3e32cd90017acbace.mockapi.io/Product", Product)
+        .put("https://61e762f3e32cd90017acbace.mockapi.io/Distributor/"+this.id, distri)
         .then((response) => (this.request = response.status))
         .catch((e) => console.log(e));
     },

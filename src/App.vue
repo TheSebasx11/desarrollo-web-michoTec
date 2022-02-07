@@ -12,6 +12,12 @@
       <router-link to="/addPurch">Agregar Compra</router-link>
       <router-link to="/about">About</router-link>
     </div>
+    <!-- <div class="flex gap-x-5">
+      <router-link to="/editUser">Editar Usuario</router-link>
+      <router-link to="/editProd">Editar Producto</router-link>
+      <router-link to="/editPurch">Editar Compra</router-link>
+      <router-link to="/editDist">Editar Distribuidor</router-link>
+    </div> -->
     <router-view />
   </div>
 </template>

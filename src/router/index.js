@@ -23,9 +23,21 @@ const routes = [
     component: () => import("../components/Usuario/AgregarUsuario.vue"),
   },
   {
+    path: "/editUser",
+    name: "Editar User",
+    component: () => import("../components/Usuario/EditarUsuario.vue"),
+    props: true,
+  },
+  {
     path: "/addProd",
     name: "Agregar Producto",
     component: () => import("../components/Producto/AgregarProducto.vue"),
+  },
+  {
+    path: "/editProd",
+    name: "Editar Producto",
+    component: () => import("../components/Producto/EditarProducto.vue"),
+    props: true,
   },
   {
     path: "/listProd",
@@ -38,6 +50,12 @@ const routes = [
     component: () => import("../components/Distribuidor/AgregarDistribuidor.vue"),
   },
   {
+    path: "/editDist",
+    name: "Editar Distribuidores",
+    component: () => import("../components/Distribuidor/EditarDistribuidor.vue"),
+    props: true,
+  },
+  {
     path: "/listDist",
     name: "Listar Distribuidores",
     component: () => import("../components/Distribuidor/ListarDistribuidor.vue"),
@@ -46,6 +64,12 @@ const routes = [
     path: "/addPurch",
     name: "Agregar Compra",
     component: () => import("../components/Compra/AgregarCompra.vue"),
+  },
+  {
+    path: "/editPurch",
+    name: "Editar Compra",
+    component: () => import("../components/Compra/EditarCompra.vue"),
+    props: true,
   },
   {
     path: "/listPurch",

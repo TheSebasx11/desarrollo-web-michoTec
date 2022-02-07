@@ -16,17 +16,17 @@
       </thead>
       <tbody>
         <tr v-for="com in Compras" :key="com.id">
-          <td class="text-black border border-black p-2">{{com.id}}</td>
-          <td class="text-black border border-black p-2">{{com.number}}</td>
-          <td class="text-black border border-black p-2">{{com.amount}}</td>
+          <td class="text-black border border-black p-2">{{ com.id }}</td>
+          <td class="text-black border border-black p-2">{{ com.number }}</td>
+          <td class="text-black border border-black p-2">{{ com.amount }}</td>
           <td class="text-black border border-black p-2">
-            {{com.totalprice}}
+            {{ com.totalprice }}
           </td>
-          <td class="text-black border border-black p-2">{{com.date}}</td>
+          <td class="text-black border border-black p-2">{{ com.date }}</td>
           <td class="text-black border border-black">
             <div class="flex flex-row justify-center items-center gap-x-2">
               <button
-                v-on:click="deleteCompra(com.id)"
+                v-on:click="showDeleteAlert(com.id)"
                 class="
                   bg-red-500
                   px-2
@@ -39,7 +39,15 @@
                 Eliminar
               </button>
               <button
-                onclick="EditarCompra(${element.id})"
+                v-on:click="
+                  goEdit(
+                    com.id,
+                    com.number,
+                    com.amount,
+                    com.totalprice,
+                    com.date
+                  )
+                "
                 class="
                   bg-green-500
                   px-2
@@ -72,6 +80,18 @@ export default {
     this.getCompras();
   },
   methods: {
+    goEdit(id, number, totalprice, amount, date) {
+      this.$router.push({
+        name: "Editar Compra",
+        params: {
+          id: id,
+          number: number,
+          totalprice: totalprice,
+          amount: amount,
+          date: date,
+        },
+      });
+    },
     getCompras() {
       axios
         .get("https://61e762f3e32cd90017acbace.mockapi.io/Purchase")
@@ -92,6 +112,23 @@ export default {
         }
       );
       this.getCompras();
+    },
+    showDeleteAlert(id) {
+      // Use sweetalert2
+      this.$swal({
+        title: "¿Estás seguro de hacerlo?",
+        text: "No podrás revertirlo!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, quiero borrarlo!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.deleteCompra(id);
+          this.$swal("Eliminado!", "El registro ha sido borrado", "success");
+        }
+      });
     },
   },
 };
