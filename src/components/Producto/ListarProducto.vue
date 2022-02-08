@@ -5,26 +5,26 @@
       class="w-11/12 mt-2 border-collapse border-2 border-black"
     >
       <thead>
-        <tr class="bg-grey-100 border">
-          <th class="text-left border p-2 border-black">ID</th>
-          <th class="text-left border p-2 border-black">Nombre</th>
-          <th class="text-left border p-2 border-black">Descripcion</th>
-          <th class="text-left border p-2 border-black">Precio</th>
-          <th class="text-left border p-2 border-black">Stock</th>
-          <th class="text-left border p-2 border-black">Acciones</th>
+        <tr class="bg-[#9AEED8] border-2 border-black">
+          <th class="text-center border p-2 border-black">ID</th>
+          <th class="text-center border p-2 border-black">Nombre</th>
+          <th class="text-center border p-2 border-black">Descripcion</th>
+          <th class="text-center border p-2 border-black">Precio</th>
+          <th class="text-center border p-2 border-black">Stock</th>
+          <th class="text-center border p-2 border-black">Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="product in Products" :key="product.id">
-          <td class="text-black border border-black p-2">{{ product.id }}</td>
-          <td class="text-black border border-black p-2">{{ product.name }}</td>
-          <td class="text-black border border-black p-2">
+          <td class="text-black text-center border border-black p-2">{{ product.id }}</td>
+          <td class="text-black text-center border border-black p-2">{{ product.name }}</td>
+          <td class="text-black text-center border border-black p-2">
             {{ product.description }}
           </td>
-          <td class="text-black border border-black p-2">
+          <td class="text-black text-center border border-black p-2">
             {{ product.price }}
           </td>
-          <td class="text-black border border-black p-2">
+          <td class="text-black text-center border border-black p-2">
             {{ product.stock }}
           </td>
           <td class="text-black border border-black p-2">

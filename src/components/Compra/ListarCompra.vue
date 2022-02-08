@@ -5,24 +5,24 @@
       class="w-11/12 mt-2 border-collapse border-2 border-black"
     >
       <thead>
-        <tr class="bg-grey-100 border">
-          <th class="text-left border p-2 border-black">ID</th>
-          <th class="text-left border p-2 border-black">Numero de compra</th>
-          <th class="text-left border p-2 border-black">Cantidad</th>
-          <th class="text-left border p-2 border-black">Total</th>
-          <th class="text-left border p-2 border-black">Fecha</th>
-          <th class="text-left border p-2 border-black">Acciones</th>
+        <tr class="bg-[#9AEED8] border">
+          <th class="text-center border p-2 border-black">ID</th>
+          <th class="text-center border p-2 border-black">Numero de compra</th>
+          <th class="text-center border p-2 border-black">Cantidad</th>
+          <th class="text-center border p-2 border-black">Total</th>
+          <th class="text-center border p-2 border-black">Fecha</th>
+          <th class="text-center border p-2 border-black">Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="com in Compras" :key="com.id">
-          <td class="text-black border border-black p-2">{{ com.id }}</td>
-          <td class="text-black border border-black p-2">{{ com.number }}</td>
-          <td class="text-black border border-black p-2">{{ com.amount }}</td>
-          <td class="text-black border border-black p-2">
+          <td class="text-black text-center border border-black p-2">{{ com.id }}</td>
+          <td class="text-black text-center border border-black p-2">{{ com.number }}</td>
+          <td class="text-black text-center border border-black p-2">{{ com.amount }}</td>
+          <td class="text-black text-center border border-black p-2">
             {{ com.totalprice }}
           </td>
-          <td class="text-black border border-black p-2">{{ com.date }}</td>
+          <td class="text-black text-center border border-black p-2">{{ com.date }}</td>
           <td class="text-black border border-black">
             <div class="flex flex-row justify-center items-center gap-x-2">
               <button

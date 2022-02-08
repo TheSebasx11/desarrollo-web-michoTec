@@ -1,6 +1,6 @@
 <template>
   <div id="nav" >
-    <div class="flex gap-x-5">
+    <div class="flex gap-x-5 bg-[#CEE6F0]">
       <router-link to="/">Home</router-link>
       <router-link to="/listUser">Listar Usuario</router-link>
       <router-link to="/addUser">Agregar Usuario</router-link>

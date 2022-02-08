@@ -8,8 +8,11 @@
       justify-center
       text-center
       items-center
+      mt-10
+      gap-x-32
     "
   >
+    <img class="h-96" src="../../assets/quizas.png">
     <section class="w-fit rounded-xl border border-black">
       <div class="purch_tittle">
         <h1 class="text-3xl font-bold m-4">Datos de Compra</h1>

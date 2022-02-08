@@ -8,8 +8,11 @@
       justify-center
       text-center
       items-center
+      gap-x-32
+      mt-10
     "
   >
+    <img class="h-96" src="../../assets/81960.png">
     <section class="w-fit rounded-xl border border-black">
       <div class="product_tittle">
         <h2 class="text-3xl font-bold m-4">Registrar producto</h2>

@@ -8,8 +8,11 @@
       justify-center
       text-center
       items-center
+      mt-10
+      gap-x-32
     "
   >
+    <img class="h-96" src="../../assets/no.png">
     <section class="w-fit rounded-xl border border-black">
       <div class="distri_tittle">
         <h2 class="text-3xl font-bold m-4">Datos del Distribuidor</h2>

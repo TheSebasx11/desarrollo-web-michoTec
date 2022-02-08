@@ -5,7 +5,7 @@
       class="w-11/12 mt-2 border-collapse border-2 border-black"
     >
       <thead>
-        <tr class="bg-grey-100 border">
+        <tr class="bg-[#9AEED8] border">
           <th class="text-left border p-2 border-black">ID</th>
           <th class="text-left border p-2 border-black">Nombre</th>
           <th class="text-left border p-2 border-black">Equipo</th>

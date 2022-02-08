@@ -1,24 +1,24 @@
 <template>
-  <div class="w-full flex justify-center">
-    <table class="w-11/12 mt-10">
+  <div class="w-full flex justify-center bg-gradient-to-b from-[#CDF2E5] to-[#CEE6F0]">
+    <table class="w-11/12 mt-10 border-collapse border-2 border-black">
       <thead>
-        <tr class="bg-grey-100 border">
-          <th class="text-left border p-2 border-black">ID</th>
-          <th class="text-left border p-2 border-black">Nombre</th>
-          <th class="text-left border p-2 border-black">Email</th>
-          <th class="text-left border p-2 border-black">Telefono</th>
-          <th class="text-left border p-2 border-black">Edad</th>
-          <th class="text-left border p-2 border-black">Codigo Postal</th>
-          <th class="text-left border p-2 border-black">Acciones</th>
+        <tr class="bg-black text-white border-2 border-black">
+          <th class="text-center border p-2 border-white">ID</th>
+          <th class="text-center border p-2 border-white">Nombre</th>
+          <th class="text-center border p-2 border-white">Email</th>
+          <th class="text-center border p-2 border-white">Telefono</th>
+          <th class="text-center border p-2 border-white">Edad</th>
+          <th class="text-center border p-2 border-white">Codigo Postal</th>
+          <th class="text-center border p-2 border-white">Acciones</th>
         </tr>
       </thead>
       <tr v-for="user in users" :key="user.id">
-        <td class="text-black border border-black p-2">{{ user.id }}</td>
-        <td class="text-black border border-black p-2">{{ user.name }}</td>
-        <td class="text-black border border-black p-2">{{ user.email }}</td>
-        <td class="text-black border border-black p-2">{{ user.phone }}</td>
-        <td class="text-black border border-black p-2">{{ user.age }}</td>
-        <td class="text-black border border-black p-2">
+        <td class="text-black text-center border border-black p-2">{{ user.id }}</td>
+        <td class="text-black text-center border border-black p-2">{{ user.name }}</td>
+        <td class="text-black text-center border border-black p-2">{{ user.email }}</td>
+        <td class="text-black text-center border border-black p-2">{{ user.phone }}</td>
+        <td class="text-black text-center border border-black p-2">{{ user.age }}</td>
+        <td class="text-black text-center border border-black p-2">
           {{ user.postal_code }}
         </td>
         <td class="text-black border border-black">

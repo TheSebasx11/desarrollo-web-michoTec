@@ -3,13 +3,17 @@
     class="
       bg-whitepx-16
       py-8
+      mt-10
       rounded-md
       flex
+      gap-x-32
       justify-center
       text-center
       items-center
+      h-full
     "
   >
+    <img class="h-96" src="../../assets/sin.png">
     <section class="w-fit rounded-xl border border-black">
       <div class="user_tittle">
         <h1 class="text-3xl font-bold m-4">Datos del Usuario</h1>
