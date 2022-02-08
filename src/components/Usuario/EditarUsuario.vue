@@ -70,7 +70,7 @@
           Cancelar
         </button>
         <button
-          v-on:click="Editar(); goList();"
+          v-on:click="Editar()"
           av-on:click="value()"
           class="
             register
@@ -136,7 +136,10 @@ export default {
           "https://61e762f3e32cd90017acbace.mockapi.io/User/" + this.id,
           User
         )
-        .then((response) => (this.request = response.status))
+        .then((response) => {
+          this.request = response.status;
+          this.goList();
+        })
         .catch((e) => console.log(e));
     },
   },

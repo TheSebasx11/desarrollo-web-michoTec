@@ -64,10 +64,7 @@
           Cancelar
         </button>
         <button
-          v-on:click="
-            Editar();
-            goList();
-          "
+          v-on:click="Editar()"
           class="
             register
             px-4
@@ -125,7 +122,10 @@ export default {
           "https://61e762f3e32cd90017acbace.mockapi.io/Purchase/" + this.id,
           pur
         )
-        .then((response) => (this.request = response.status))
+        .then((response) => {
+          this.request = response.status;
+          this.goList();
+        })
         .catch((e) => console.log(e));
     },
   },

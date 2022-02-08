@@ -75,7 +75,6 @@
         </button>
         <button
           v-on:click="
-            goList();
             Registrar();
           "
           class="
@@ -126,10 +125,20 @@ export default {
       return User;
     },
     Registrar() {
-      let User = this.createUser(0, this.name_i, this.email_i, this.phone_i, this.age_i, this.postal_i);
+      let User = this.createUser(
+        0,
+        this.name_i,
+        this.email_i,
+        this.phone_i,
+        this.age_i,
+        this.postal_i
+      );
       axios
         .post("https://61e762f3e32cd90017acbace.mockapi.io/User", User)
-        .then((response) => (this.request = response.status))
+        .then((response) => {
+          this.request = response.status;
+          this.goList();
+        })
         .catch((e) => console.log(e));
     },
   },

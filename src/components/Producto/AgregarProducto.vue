@@ -63,7 +63,7 @@
           Cancelar
         </button>
         <button
-          v-on:click="Registrar();goList(); "
+          v-on:click="Registrar()"
           class="
             register
             ml-20
@@ -109,11 +109,20 @@ export default {
       return Product;
     },
     Registrar() {
-      let Product = this.createProduct(0, this.name_p, this.desc_p, this.price_p, this.stock_p);
+      let Product = this.createProduct(
+        0,
+        this.name_p,
+        this.desc_p,
+        this.price_p,
+        this.stock_p
+      );
       console.log(Product);
       axios
         .post("https://61e762f3e32cd90017acbace.mockapi.io/Product", Product)
-        .then((response) => (this.request = response.status))
+        .then((response) => {
+          this.request = response.status;
+          this.goList();
+        })
         .catch((e) => console.log(e));
     },
   },
