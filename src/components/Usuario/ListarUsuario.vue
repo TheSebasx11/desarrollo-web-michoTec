@@ -68,7 +68,6 @@
 </template>
 
 <script>
-//import Swal from 'vue-sweetalert2';
 import axios from "axios";
 export default {
   name: "ListarUsuario",
@@ -98,7 +97,7 @@ export default {
       axios
         .get("https://61e762f3e32cd90017acbace.mockapi.io/User")
         .then((response) => {
-          //console.log(response);
+          console.log(response.data);
           this.users = response.data;
         })
         .catch((e) => console.log(e));

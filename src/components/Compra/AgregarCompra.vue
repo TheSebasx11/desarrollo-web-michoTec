@@ -60,7 +60,7 @@
           Cancelar
         </button>
         <button
-          v-on:click=" Registrar();goList();"
+          v-on:click="Registrar()"
           class="
             register
             px-4
@@ -116,7 +116,10 @@ export default {
       );
       axios
         .post("https://61e762f3e32cd90017acbace.mockapi.io/Purchase", pur)
-        .then((response) => (this.request = response.status))
+        .then((response) => {
+          this.request = response.status;
+          this.goList();
+        })
         .catch((e) => console.log(e));
     },
   },

@@ -60,10 +60,7 @@
           Cancelar
         </button>
         <button
-          v-on:click="
-            Registrar();
-            goList();
-          "
+          v-on:click="Registrar()"
           class="
             register
             ml-20
@@ -90,7 +87,7 @@ export default {
     id: String,
     name: String,
     equipment: String,
-    category: String
+    category: String,
   },
   methods: {
     goList() {
@@ -113,8 +110,14 @@ export default {
         this.$refs.d_category.value
       );
       axios
-        .put("https://61e762f3e32cd90017acbace.mockapi.io/Distributor/"+this.id, distri)
-        .then((response) => (this.request = response.status))
+        .put(
+          "https://61e762f3e32cd90017acbace.mockapi.io/Distributor/" + this.id,
+          distri
+        )
+        .then((response) => {
+          this.request = response.status;
+          this.goList();
+        })
         .catch((e) => console.log(e));
     },
   },
