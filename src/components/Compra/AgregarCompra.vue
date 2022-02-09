@@ -21,27 +21,27 @@
         <p class="name text-xl font-semibold">Numero de compra</p>
         <input
           v-model="p_number"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textname"
           placeholder=""
         />
         <p class="email text-xl font-semibold">Precio de compra</p>
         <input
           v-model="p_price"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="emailtext"
           placeholder=""
         />
         <p class="Telefonodecontacto text-xl font-semibold">Cantidad</p>
         <input
           v-model="p_amount"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textcontact"
         />
         <p class="age text-xl font-semibold">Fecha de compra</p>
         <input
           v-model="p_date"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textage"
         />
       </div>

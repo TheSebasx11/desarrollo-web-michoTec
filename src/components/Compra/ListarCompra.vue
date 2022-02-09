@@ -1,5 +1,10 @@
 <template>
-  <div class="flex justify-center">
+  <div class="w-full flex flex-col items-center justify-center bg-gradient-to-b from-[#CDF2E5] to-[#CEE6F0]">
+    <div class="">
+      <h2 class="text-center font-bold font-sans my-4 text-3xl">
+        Lista de Compras
+      </h2>
+    </div>
     <table
       id="tabla2"
       class="w-11/12 mt-2 border-collapse border-2 border-black"

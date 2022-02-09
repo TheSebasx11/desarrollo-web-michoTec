@@ -22,14 +22,14 @@
         <p class="name text-xl font-semibold">Nombre</p>
         <input
           v-model="name_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textname"
           placeholder="Nombre del usuario"
         />
         <p class="email text-xl font-semibold">Correo</p>
         <input
           v-model="email_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="emailtext"
           placeholder="@example.com"
         />
@@ -38,19 +38,19 @@
         </p>
         <input
           v-model="phone_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textcontact"
         />
         <p class="age text-xl font-semibold">Edad</p>
         <input
           v-model="age_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textage"
         />
         <p class="postalcode text-xl font-semibold">Codigo postal</p>
         <input
           v-model="postal_i"
-          class="border-2 border-black w-72"
+          class="border-2 border-black w-72 px-2"
           type="postaltext"
         />
       </div>

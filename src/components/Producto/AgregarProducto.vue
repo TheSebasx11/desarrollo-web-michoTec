@@ -21,27 +21,27 @@
         <p class="product_name text-xl font-semibold">Nombre del Producto</p>
         <input
           v-model="name_p"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="nameproduct"
         />
         <p class="product_description text-xl font-semibold">Descripcion</p>
         <textarea
           v-model="desc_p"
           placeholder="Ingrese aqui la descripcion del producto"
-          class="description border-2 mb-2 border-black resize-none w-72 h-32"
+          class="description border-2 mb-2 border-black resize-none w-72 h-32 px-2"
           cols="30"
           rows="10"
         ></textarea>
         <p class="product_price text-xl font-semibold">Precio del Producto</p>
         <input
           v-model="price_p"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="priceproduct"
         />
         <p class="product_stock text-xl font-semibold">Stock</p>
         <input
           v-model="stock_p"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="stockproduct"
         />
       </div>

@@ -1,15 +1,20 @@
 <template>
-  <div class="w-full flex justify-center bg-gradient-to-b from-[#CDF2E5] to-[#CEE6F0]">
+  <div class="w-full flex flex-col items-center justify-center bg-gradient-to-b from-[#CDF2E5] to-[#CEE6F0]">
+    <div class="">
+      <h1 class="text-center font-bold font-sans mt-4 text-3xl">
+        Listado de Usuarios
+      </h1>
+    </div>
     <table class="w-11/12 mt-10 border-collapse border-2 border-black">
       <thead>
-        <tr class="bg-black text-white border-2 border-black">
-          <th class="text-center border p-2 border-white">ID</th>
-          <th class="text-center border p-2 border-white">Nombre</th>
-          <th class="text-center border p-2 border-white">Email</th>
-          <th class="text-center border p-2 border-white">Telefono</th>
-          <th class="text-center border p-2 border-white">Edad</th>
-          <th class="text-center border p-2 border-white">Codigo Postal</th>
-          <th class="text-center border p-2 border-white">Acciones</th>
+        <tr class="bg-[#9AEED8] text-black border-2 border-black">
+          <th class="text-center border p-2 border-black">ID</th>
+          <th class="text-center border p-2 border-black">Nombre</th>
+          <th class="text-center border p-2 border-black">Email</th>
+          <th class="text-center border p-2 border-black">Telefono</th>
+          <th class="text-center border p-2 border-black">Edad</th>
+          <th class="text-center border p-2 border-black">Codigo Postal</th>
+          <th class="text-center border p-2 border-black">Acciones</th>
         </tr>
       </thead>
       <tr v-for="user in users" :key="user.id">
