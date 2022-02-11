@@ -19,7 +19,7 @@
         <input
           v-bind:value="number"
           ref="p_number"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textname"
           placeholder=""
         />
@@ -27,7 +27,7 @@
         <input
           v-bind:value="totalprice"
           ref="p_price"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="emailtext"
           placeholder=""
         />
@@ -35,14 +35,14 @@
         <input
           v-bind:value="amount"
           ref="p_amount"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textcontact"
         />
         <p class="age text-xl font-semibold">Fecha de compra</p>
         <input
           v-bind:value="date"
           ref="p_date"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="textage"
         />
       </div>

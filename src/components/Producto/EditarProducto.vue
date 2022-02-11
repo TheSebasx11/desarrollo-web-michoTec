@@ -19,7 +19,7 @@
         <input
           v-bind:value="name"
           ref="name_p"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="nameproduct"
         />
         <p class="product_description text-xl font-semibold">Descripcion</p>
@@ -27,7 +27,7 @@
           v-bind:value="description"
           ref="desc_p"
           placeholder="Ingrese aqui la descripcion del producto"
-          class="description border-2 mb-2 border-black resize-none w-72 h-32"
+          class="description border-2 mb-2 border-black resize-none w-72 h-32 px-2"
           cols="30"
           rows="10"
         ></textarea>
@@ -35,14 +35,14 @@
         <input
           v-bind:value="price"
           ref="price_p"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="priceproduct"
         />
         <p class="product_stock text-xl font-semibold">Stock</p>
         <input
           v-bind:value="stock"
           ref="stock_p"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="stockproduct"
         />
       </div>

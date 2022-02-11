@@ -19,7 +19,7 @@
         <input
           v-bind:value="name"
           ref="d_name"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="namedistri"
         />
         <p class="distri_description text-xl font-semibold">
@@ -30,7 +30,7 @@
           ref="d_equip"
           name=""
           placeholder="Ingrese aqui la descripcion del producto"
-          class="p-2 description border-2 mb-1 border-black resize-none w-72"
+          class="p-2 description border-2 mb-1 border-black resize-none w-72 px-2"
           cols="30"
           rows="10"
         ></textarea>
@@ -38,7 +38,7 @@
         <input
           v-bind:value="category"
           ref="d_category"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           type="priceproduct"
         />
       </div>

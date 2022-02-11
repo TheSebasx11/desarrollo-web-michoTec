@@ -19,14 +19,14 @@
         <input
           v-bind:value="name"
           ref="name_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           placeholder="Nombre del usuario"
         />
         <p class="email text-xl font-semibold">Correo</p>
         <input
           v-bind:value="email"
           ref="email_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
           placeholder="@example.com"
         />
         <p class="Telefonodecontacto text-xl font-semibold">
@@ -35,19 +35,19 @@
         <input
           v-bind:value="phone"
           ref="phone_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
         />
         <p class="age text-xl font-semibold">Edad</p>
         <input
           v-bind:value="age"
           ref="age_i"
-          class="border-2 mb-2 border-black w-72"
+          class="border-2 mb-2 border-black w-72 px-2"
         />
         <p class="postalcode text-xl font-semibold">Codigo postal</p>
         <input
           v-bind:value="postal"
           ref="postal_i"
-          class="border-2 border-black w-72"
+          class="border-2 border-black w-72 px-2"
         />
       </div>
       <div
