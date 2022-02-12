@@ -12,6 +12,10 @@ module.exports = {
     "./src/components/Distribuidor/AgregarDistribuidor.vue",
     "./src/components/Compra/ListarCompra.vue",
     "./src/components/Compra/AgregarCompra.vue",
+    "./src/components/Usuario/EditarUsuario.vue",
+    "./src/components/Producto/EditarProducto.vue",
+    "./src/components/Distribuidor/EditarDistribuidor.vue",
+    "./src/components/Compra/EditarCompra.vue",
   ],
   theme: {
     extend: {

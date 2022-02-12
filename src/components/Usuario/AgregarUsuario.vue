@@ -16,7 +16,7 @@
     <img class="h-96" src="../../assets/sin.png">
     <section class="w-fit rounded-xl border border-black">
       <div class="user_tittle">
-        <h1 class="text-3xl font-bold m-4">Datos de la Homoxesualidad del  Usuario</h1>
+        <h1 class="text-3xl font-bold m-4">Datos del Usuario</h1>
       </div>
       <div class="user_info mx-4 mb-4">
         <p class="name text-xl font-semibold">Nombre</p>

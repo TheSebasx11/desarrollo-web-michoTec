@@ -46,7 +46,7 @@
           type="textage"
         />
       </div>
-      <div class="button_class mx-4 mb-10 flex flex-row">
+      <div class="button_class mx-4 mb-10 flex flex-row justify-between">
         <button
           v-on:click="goList()"
           class="
@@ -68,7 +68,6 @@
           class="
             register
             px-4
-            ml-20
             border-2 border-black
             font-semibold
             bg-white

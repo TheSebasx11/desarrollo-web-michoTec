@@ -26,14 +26,14 @@
             title="Distribuidor"
             desc="En la pestañana Distribuidor contamos con 2 opciones
                 principales, Listar Distribuidor y Agregar Distribuidor. Los
-                cuales nos permiten visualizar y editar los datos del usuario."
+                cuales nos permiten visualizar y editar los datos del distribuidor."
             :img="dist"
           />
           <Card
             title="Compra"
             desc="En la pestañana Compras contamos con 2 opciones principales,
                 Listar Compras y Agregar Compras. Los cuales nos permiten
-                visualizar y editar los datos del usuario."
+                visualizar y editar los datos de las compras."
             :img="compra"
           />
         </div>
