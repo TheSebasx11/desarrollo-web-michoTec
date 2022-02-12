@@ -3,6 +3,7 @@ module.exports = {
     "./public/index.html",
     "./src/App.vue",
     "./src/views/Home.vue",
+    "./src/components/Card.vue",
     "./src/components/Usuario/ListarUsuario.vue",
     "./src/components/Usuario/AgregarUsuario.vue",
     "./src/components/Producto/ListarProducto.vue",

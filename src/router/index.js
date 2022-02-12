@@ -8,11 +8,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  },
-  {
     path: "/listUser",
     name: "Lista",
     component: () => import("../components/Usuario/ListarUsuario.vue"),
