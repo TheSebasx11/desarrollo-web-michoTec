@@ -31,7 +31,6 @@
             <router-link to="/addPurch">Agregar Compra</router-link>
           </div>
         </li>
-        <router-link to="/about">About</router-link>
       </ul>
     </div>
     <router-view />
@@ -43,11 +42,6 @@ import "../css/output.css";
 
 export default {
   name: "App",
-  data: () => {
-    return {
-      indice: false,
-    };
-  },
   methods: {
     show(bar) {
       this.$refs[bar].className =
