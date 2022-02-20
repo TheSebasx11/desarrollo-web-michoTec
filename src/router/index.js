@@ -1,21 +1,24 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-
+import { createRouter, createWebHashHistory } from "vue-router";
+import Home from "../views/Home.vue";
+import Layout from "../components/Layout.vue";
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Layout,
+    children: [{ path: "", component: Home }],
   },
   {
     path: "/listUser",
     name: "Lista",
-    component: () => import("../components/Usuario/ListarUsuario.vue"),
+    component: Layout,
+    children:[{path:"", component: () => import("../components/Usuario/ListarUsuario.vue"),}]
   },
   {
     path: "/addUser",
     name: "Agregar User",
-    component: () => import("../components/Usuario/AgregarUsuario.vue"),
+    component: Layout,
+    children:[{path:"", component: () => import("../components/Usuario/AgregarUsuario.vue"),}]
   },
   {
     path: "/editUser",
@@ -26,7 +29,8 @@ const routes = [
   {
     path: "/addProd",
     name: "Agregar Producto",
-    component: () => import("../components/Producto/AgregarProducto.vue"),
+    component: Layout,
+    children:[{path:"", component: () => import("../components/Producto/AgregarProducto.vue"),}]
   },
   {
     path: "/editProd",
@@ -37,28 +41,34 @@ const routes = [
   {
     path: "/listProd",
     name: "Lista Producto",
-    component: () => import("../components/Producto/ListarProducto.vue"),
+    component: Layout,
+    children:[{path:"", component: () => import("../components/Producto/ListarProducto.vue"),}]
   },
   {
     path: "/addDist",
     name: "Agregar Distribuidores",
-    component: () => import("../components/Distribuidor/AgregarDistribuidor.vue"),
+    component: Layout,
+    children:[{path:"", component: () => import("../components/Distribuidor/AgregarDistribuidor.vue"),}]
   },
   {
     path: "/editDist",
     name: "Editar Distribuidores",
-    component: () => import("../components/Distribuidor/EditarDistribuidor.vue"),
+    component: () =>
+      import("../components/Distribuidor/EditarDistribuidor.vue"),
     props: true,
   },
   {
     path: "/listDist",
     name: "Listar Distribuidores",
-    component: () => import("../components/Distribuidor/ListarDistribuidor.vue"),
+    component: Layout,
+
+      children:[{path:"", component: () => import("../components/Distribuidor/ListarDistribuidor.vue"),}]
   },
   {
     path: "/addPurch",
     name: "Agregar Compra",
-    component: () => import("../components/Compra/AgregarCompra.vue"),
+    component: Layout,
+    children:[{path:"", component: () => import("../components/Compra/AgregarCompra.vue"),}]
   },
   {
     path: "/editPurch",
@@ -69,14 +79,19 @@ const routes = [
   {
     path: "/listPurch",
     name: "Lista Compra",
-    component: () => import("../components/Compra/ListarCompra.vue"),
+    component: Layout,
+    children:[{path:"", component: () => import("../components/Compra/ListarCompra.vue"),}]
   },
-]
+  {
+    path: "/shop",
+    name: "Tienda",
+    component: () => import("../views/mainView.vue"),
+  },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
-})
+  routes,
+});
 
-export default router
-
+export default router;
