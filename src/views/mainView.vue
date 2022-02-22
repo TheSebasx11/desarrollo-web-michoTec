@@ -1,11 +1,14 @@
 <template>
-    <div>
-        a
-    </div>
+  <div>
+    <div>Contenido</div>
+  </div>
 </template>
 
 <script>
+
 export default {
-    
-}
+  components: {
+  
+  },
+};
 </script>

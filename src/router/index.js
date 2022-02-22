@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Layout from "../components/Layout.vue";
+import ShopLayout from "../components/ShopLayout.vue"
 const routes = [
   {
     path: "/",
@@ -85,8 +86,16 @@ const routes = [
   {
     path: "/shop",
     name: "Tienda",
-    component: () => import("../views/mainView.vue"),
+    component: ShopLayout,
+    children: [{path: "", component: () => import("../views/mainView.vue"),}]
   },
+  {
+    path: "/shopProduct",
+    name: "Producto Shop",
+    component: ShopLayout,
+    children: [{path: "", component: ()=> import("../views/ProductShop.vue")}]
+  }
+
 ];
 
 const router = createRouter({
