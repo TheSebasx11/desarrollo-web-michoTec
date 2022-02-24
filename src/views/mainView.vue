@@ -1,5 +1,5 @@
 <template>
-  <div class="m-5">
+  <div class="bg-gradient-to-b from-blue-500 to-blue-800">
     <h2 class="featured_products_container font-bold text-3xl text-center m-5">
       Productos destacados
     </h2>
