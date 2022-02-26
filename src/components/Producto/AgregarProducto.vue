@@ -44,6 +44,12 @@
           class="border-2 mb-2 border-black w-72 px-2"
           type="stockproduct"
         />
+        <p class="product_stock text-xl font-semibold">URL</p>
+        <input
+          v-model="url_p"
+          class="border-2 mb-2 border-black w-72 px-2"
+          type="stockproduct"
+        />
       </div>
       <div class="button_class mx-4 mb-2">
         <button
@@ -92,19 +98,21 @@ export default {
       desc_p: "",
       price_p: "",
       stock_p: "",
+      url_p: "",
     };
   },
   methods: {
     goList() {
       this.$router.push("listProd");
     },
-    createProduct(id_, name_, description_, price_, stock_) {
+    createProduct(id_, name_, description_, price_, stock_, url_) {
       var Product = {
         id: id_,
         name: name_,
         description: description_,
         price: price_,
         stock: stock_,
+        url: url_,
       };
       return Product;
     },
@@ -114,7 +122,8 @@ export default {
         this.name_p,
         this.desc_p,
         this.price_p,
-        this.stock_p
+        this.stock_p,
+        this.url_p
       );
       console.log(Product);
       axios

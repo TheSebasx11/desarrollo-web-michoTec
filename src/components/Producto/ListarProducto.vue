@@ -1,5 +1,15 @@
 <template>
-  <div class="w-full flex flex-col items-center justify-center bg-gradient-to-b from-[#CDF2E5] to-[#CEE6F0]">
+  <div
+    class="
+      w-full
+      flex flex-col
+      items-center
+      justify-center
+      bg-gradient-to-b
+      from-[#CDF2E5]
+      to-[#CEE6F0]
+    "
+  >
     <div class="">
       <h2 class="text-center font-bold font-sans my-4 text-3xl">
         Lista de Productos
@@ -16,13 +26,18 @@
           <th class="text-center border p-2 border-black">Descripcion</th>
           <th class="text-center border p-2 border-black">Precio</th>
           <th class="text-center border p-2 border-black">Stock</th>
+          <th class="text-center border p-2 border-black">URL</th>
           <th class="text-center border p-2 border-black">Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="product in Products" :key="product.id">
-          <td class="text-black text-center border border-black p-2">{{ product.id }}</td>
-          <td class="text-black text-center border border-black p-2">{{ product.name }}</td>
+          <td class="text-black text-center border border-black p-2">
+            {{ product.id }}
+          </td>
+          <td class="text-black text-center border border-black p-2">
+            {{ product.name }}
+          </td>
           <td class="text-black text-center border border-black p-2">
             {{ product.description }}
           </td>
@@ -31,6 +46,9 @@
           </td>
           <td class="text-black text-center border border-black p-2">
             {{ product.stock }}
+          </td>
+          <td class="text-black border border-black p-2">
+            <p class="w-72 break-words">{{ product.url }}</p>
           </td>
           <td class="text-black border border-black p-2">
             <div class="flex flex-row justify-center items-center gap-x-2">
@@ -54,7 +72,8 @@
                     product.name,
                     product.description,
                     product.price,
-                    product.stock
+                    product.stock,
+                    product.url
                   )
                 "
                 class="
@@ -89,7 +108,7 @@ export default {
     this.getProducts();
   },
   methods: {
-    goEdit(id_, name_, description_, price_, stock_) {
+    goEdit(id_, name_, description_, price_, stock_, url_) {
       this.$router.push({
         name: "Editar Producto",
         params: {
@@ -98,6 +117,7 @@ export default {
           description: description_,
           price: price_,
           stock: stock_,
+          url: url_,
         },
       });
     },

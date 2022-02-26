@@ -4,11 +4,24 @@ import Layout from "../components/Layout.vue";
 import ShopLayout from "../components/ShopLayout.vue";
 const routes = [
   {
-    path: "/",
+    path: "/home",
     name: "Home",
     component: Layout,
     children: [{ path: "", component: Home }],
   },
+
+  {
+    path: "/",
+    name: "Login",
+    component: () => import("../views/Login.vue"),
+  },
+  
+  {
+    path: "/register",
+    name: "Register",
+    component: () => import("../views/Register.vue"),
+  },
+
   {
     path: "/listUser",
     name: "Lista",
@@ -126,7 +139,7 @@ const routes = [
     ],
   },
   {
-    path: "/",
+    path: "/home",
     name: "Tienda",
     component: ShopLayout,
     children: [
@@ -136,11 +149,10 @@ const routes = [
         component: () => import("../views/ProductShop.vue"),
       },
       {
-        
         path: "/ShopItem/:id",
         component: () => import("../components/Inicio/ProductItem.vue"),
         props: true,
-      }
+      },
     ],
   },
   /*{

@@ -1,56 +1,29 @@
 <template>
   <div class="bg-gradient-to-b from-blue-500 to-blue-800">
-    <div>
-      <h2 class="font-bold text-3xl text-center m-5">Productos destacados</h2>
-      <div class="grid grid-cols-3">
-        <p></p>
-        <p class="mb-10">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nihil
-          accusamus earum eius magnam quisquam incidunt error eaque iure soluta?
-          Recusandae autem exercitationem pariatur labore magnam velit provident
-          aliquid at.
+    <div class="pt-10">
+      <h2 class="font-bold text-3xl text-center text-white">Productos destacados</h2>
+      <div class="flex w-full justify-center">
+        <p class="my-5 text-center  text-white">
+          Obtén tu producto rapido. Que se acaban rapido
         </p>
-        <p></p>
       </div>
     </div>
-    <div class="grid grid-cols-4 gap-10 mb-24">
-      <div>
-        <img
-          class="border-2 border-white"
-          src="http://placeimg.com/640/480/sports"
-        />
-        <p class="text-center text-white font-semibold">CATEGORY</p>
-      </div>
-      <div>
-        <img
-          class="border-2 border-white"
-          src="http://placeimg.com/640/480/sports"
-        />
-        <p class="text-center text-white font-semibold">CATEGORY</p>
-      </div>
-      <div>
-        <img
-          class="border-2 border-white"
-          src="http://placeimg.com/640/480/sports"
-        />
-        <p class="text-center text-white font-semibold">CATEGORY</p>
-      </div>
-      <div>
-        <img
-          class="border-2 border-white"
-          src="http://placeimg.com/640/480/sports"
-        />
-      </div>
+    <div class="grid grid-cols-4 px-5">
+      <main-produc-item
+      class=""
+        v-for="product in StarredProducts"
+        :key="product.id"
+        :id="product.id"
+        :title="product.name"
+        :url="product.url"
+      />
     </div>
-    <div class="flex">
-      <div>
+    <div class="flex w-full mt-28 ">
+      <div class="w-1/2">
         <div class="announce_container my-6 ml-6">
           <h2 class="text-3xl font-bold mb-7">Compra ya tu producto!</h2>
           <p class="text-left mr-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea nihil
-            accusamus earum eius magnam quisquam incidunt error eaque iure
-            soluta? Recusandae autem exercitationem pariatur labore magnam velit
-            provident aliquid at.
+            Obtén tu producto rapido. Que se acaban rapido
           </p>
         </div>
         <div class="button_browse m-6">
@@ -70,137 +43,45 @@
           </button>
         </div>
       </div>
-      <div class="inline-grid grid-cols-2">
-        <div>
-          <div class="grid grid-cols-2 mb-4">
-            <img
-              class="border-2 border-white"
-              src="http://placeimg.com/640/480/sports"
-              alt=""
-            />
-            <div class="items-center justify-center flex flex-col">
-              <h2 class="text-xl font-sans font-bold text-center">
-                Titulo de producto
-              </h2>
-              <div class="flex items-center justify-center m-1">
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-              </div>
-              <p class="text-lg text-center">$5000</p>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 mb-4">
-            <img
-              class="border-2 border-white"
-              src="http://placeimg.com/640/480/sports"
-              alt=""
-            />
-            <div class="items-center justify-center flex flex-col">
-              <h2 class="text-xl font-sans font-bold text-center">
-                Titulo de producto
-              </h2>
-              <div class="flex items-center justify-center m-1">
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-              </div>
-              <p class="text-lg text-center">$5000</p>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 mb-4">
-            <img
-              class="border-2 border-white"
-              src="http://placeimg.com/640/480/sports"
-              alt=""
-            />
-            <div class="items-center justify-center flex flex-col">
-              <h2 class="text-xl font-sans font-bold text-center">
-                Titulo de producto
-              </h2>
-              <div class="flex items-center justify-center m-1">
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-              </div>
-              <p class="text-lg text-center">$5000</p>
-            </div>
-            
-          </div>
-        </div>
-        <div>
-          <div class="grid grid-cols-2 mb-4">
-            <img
-              class="border-2 border-white"
-              src="http://placeimg.com/640/480/sports"
-              alt=""
-            />
-            <div class="items-center justify-center flex flex-col">
-              <h2 class="text-xl font-sans font-bold text-center">
-                Titulo de producto
-              </h2>
-              <div class="flex items-center justify-center m-1">
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-              </div>
-              <p class="text-lg text-center">$5000</p>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 mb-4">
-            <img
-              class="border-2 border-white"
-              src="http://placeimg.com/640/480/sports"
-              alt=""
-            />
-            <div class="items-center justify-center flex flex-col">
-              <h2 class="text-xl font-sans font-bold text-center">
-                Titulo de producto
-              </h2>
-              <div class="flex items-center justify-center m-1">
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-              </div>
-              <p class="text-lg text-center">$5000</p>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 mb-4">
-            <img
-              class="border-2 border-white"
-              src="http://placeimg.com/640/480/sports"
-              alt=""
-            />
-            <div class="items-center justify-center flex flex-col">
-              <h2 class="text-xl font-sans font-bold text-center">
-                Titulo de producto
-              </h2>
-              <div class="flex items-center justify-center m-1">
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-                <img class="h-5 w-5" src="http://placeimg.com/640/480/sports" />
-              </div>
-              <p class="text-lg text-center">$5000</p>
-            </div>
-          </div>
-        </div>
+      <div class="grid grid-cols-2 gap-x-10 ">
+        <main-produc-item
+          v-for="product in Products"
+          :key="product.id"
+          :id="product.id"
+          :title="product.name"
+          :url="product.url"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import MainProducItem from "../components/Inicio/MainProductItem.vue";
+import axios from "axios";
+export default {
+  data: () => {
+    return {
+      Products: null,
+      StarredProducts: null,
+    };
+  },
+  components: {
+    MainProducItem,
+  },
+  mounted() {
+    this.getProducts();
+  },
+  methods: {
+    getProducts() {
+      axios
+        .get("https://61e762f3e32cd90017acbace.mockapi.io/Product")
+        .then((response) => {
+          this.Products = response.data;
+          this.StarredProducts =  this.Products.slice(0, 4);
+        })
+        .catch((e) => console.log(e));
+    },
+  },
+};
 </script>
