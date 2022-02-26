@@ -4,8 +4,8 @@
       <div class="border-2 border-white flex justify-center w-fit rounded-2xl">
         <img class="w-72 h-52 object-cover rounded-2xl" :src="url" />
       </div>
-      <p class="flex justify-center text-white">{{ title }}</p></router-link
-    >
+      <p class="flex justify-center text-white">{{ title }}</p>
+    </router-link>
   </div>
 </template>
 

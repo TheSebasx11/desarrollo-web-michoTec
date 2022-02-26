@@ -1,40 +1,23 @@
 <template>
-  <!--<div class="w-full border bg-amber-300 border-black">
-    <div class="flex w-full">
-      <div class="flex">
-        <img :src="Product.url" />
-      </div>
-      <div class="flex flex-col items-center w-1/2">
-        <p class="font-bold mt-5">{{ Product.name }}</p>
-        <p class="px-10">{{Product.description}}</p>
-      </div>
-    </div>
-  </div>!-->
   <div class="bg-gradient-to-b from-blue-500 to-blue-800">
     <div class="grid grid-cols-2 border border-black">
       <div class="border border-black">
-        <img class="h-full w-full" :src="Product.url">
+        <img class="h-full w-full" :src="Product.url" />
       </div>
       <div
         class="items-center justify-center flex flex-col border border-black"
       >
         <h2 class="font-bold text-4xl">
-          {{Product.name}}
+          {{ Product.name }}
         </h2>
         <div class="flex items-center justify-center m-3">
-          <img class="h-5 w-5" :src="Product.url">
-          <img class="h-5 w-5" :src="Product.url">
-          <img class="h-5 w-5" :src="Product.url">
-          <img class="h-5 w-5" :src="Product.url">
-          <img class="h-5 w-5" :src="Product.url">
+          <box-icon type="solid" v-for="i in 5" :key="i" name="star"></box-icon>
         </div>
         <div>
-          <p class="text-xl text-center">
-            $ {{Product.price}}
-          </p>
+          <p class="text-xl text-center">$ {{ Product.price }}</p>
         </div>
         <p class="text-3xl p-4 text-justify">
-          {{Product.description}}
+          {{ Product.description }}
         </p>
         <div class="text-center m-4">
           <a
@@ -63,170 +46,47 @@
           Productos Similares
         </h3>
         <div class="grid grid-cols-3 gap-2">
-          <div>
-            <div class="border border-white">
-              <div class="flex items-center justify-center">
-                <img
-                  class="w-full"
-                  src="http://placeimg.com/640/480/abstract"
-                />
-                <!--<img class="w-full" :src="productimage">!-->
-              </div>
-              <div>
-                <h2 class="text-xl font-sans font-bold text-center">
-                  Titulo de producto
-                  {{ ptittle }}
-                </h2>
-                <div class="flex items-center justify-center m-1">
-                  <!--<img class="h-5 w-5" :src="productimage">!-->
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                </div>
-                <p class="text-lg text-center">
-                  $5000
-                  {{ price }}
-                </p>
-              </div>
-            </div>
-             </div>
-          <div>
-            <div class="border border-white">
-              <div class="flex items-center justify-center">
-                <img
-                  class="w-full"
-                  src="http://placeimg.com/640/480/abstract"
-                />
-                <!--<img class="w-full" :src="productimage">!-->
-              </div>
-              <div>
-                <h2 class="text-xl font-sans font-bold text-center">
-                  Titulo de producto
-                  {{ ptittle }}
-                </h2>
-                <div class="flex items-center justify-center m-1">
-                  <!--<img class="h-5 w-5" :src="productimage">!-->
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                </div>
-                <p class="text-lg text-center">
-                  $5000
-                  {{ price }}
-                </p>
-              </div>
-            </div>
-             </div>
-          <div>
-            <div class="border border-white">
-              <div class="flex items-center justify-center">
-                <img
-                  class="w-full"
-                  src="http://placeimg.com/640/480/abstract"
-                />
-                <!--<img class="w-full" :src="productimage">!-->
-              </div>
-              <div>
-                <h2 class="text-xl font-sans font-bold text-center">
-                  Titulo de producto
-                  {{ ptittle }}
-                </h2>
-                <div class="flex items-center justify-center m-1">
-                  <!--<img class="h-5 w-5" :src="productimage">!-->
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                  <img
-                    class="h-5 w-5"
-                    src="http://placeimg.com/640/480/abstract"
-                  />
-                </div>
-                <p class="text-lg text-center">
-                  $5000
-                  {{ price }}
-                </p>
-              </div>
-            </div>
-            </div>
+          <related-product
+            v-for="pro in Products"
+            :key="pro.id"
+            :id="pro.id"
+            :price="pro.price"
+            :tittle="pro.name"
+            :url="pro.url"
+          />
+
+          <!-- aqui -->
         </div>
       </div>
     </div>
   </div>
   <div>
     <div>
-      <div class="border  flex">
-                <div class="flex justify-center items-center">
-                    <img class="h-52 p-10 object-contain" src="http://placeimg.com/640/480/abstract">
-                </div>
-                <div class="p-4">
-                    <p class="text-center text-2xl font-sans font-bold ">
-                        Mariana Cena
-                    </p>
-                    <p class="text-center">
-                        Agosto 4 de 2021
-                    </p>
-                </div>
-                <div class="text-2xl flex items-center m-4 font-sans">
-                    <p class="text-center">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorem optio et obcaecati
-                        corrupti! Omnis, id dolorum eaque nisi fuga fugiat pariatur itaque? Dignissimos, odit repellat
-                        voluptatum saepe omnis fugit!
-                    </p>
-                </div>
-            </div>
+      <div class="border flex">
+        <div class="flex justify-center items-center">
+          <img
+            class="h-52 p-10 object-cover rounded-full"
+            src="http://placeimg.com/640/480/abstract"
+          />
+        </div>
+        <div class="p-4 flex flex-col justify-center">
+          <p class="text-center text-2xl font-sans font-bold">Mariana Cena</p>
+          <p class="text-center">Agosto 4 de 2021</p>
+        </div>
+        <div class="text-2xl flex items-center m-4 font-sans">
+          <p class="text-center">
+            Es un magnifico producto, completamente funcional, me gusta mucho
+            este! ¡¡¡Recomendado 100%!!!
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import RelatedProduct from "../Inicio/relatedProducts.vue";
 export default {
   props: {
     id: Number,
@@ -240,10 +100,15 @@ export default {
         stock: 0,
         url: "",
       },
+      Products: {}
     };
+  },
+  components: {
+    RelatedProduct,
   },
   mounted() {
     this.getProduct();
+    this.getProducts();
   },
   methods: {
     getProduct() {
@@ -253,6 +118,16 @@ export default {
           this.Product = response.data;
         })
         .catch(console.log);
+    },
+    getProducts() {
+      axios
+        .get("https://61e762f3e32cd90017acbace.mockapi.io/Product")
+        .then((response) => {
+          const numero = Math.floor(Math.random() * 10);
+          this.Products = response.data.slice(numero, numero+3);
+          
+        })
+        .catch((e) => console.log(e));
     },
   },
 };

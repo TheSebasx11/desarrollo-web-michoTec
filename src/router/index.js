@@ -15,7 +15,7 @@ const routes = [
     name: "Login",
     component: () => import("../views/Login.vue"),
   },
-  
+
   {
     path: "/register",
     name: "Register",
@@ -140,10 +140,14 @@ const routes = [
   },
   {
     path: "/home",
-    name: "Tienda",
+
     component: ShopLayout,
     children: [
-      { path: "/shop", component: () => import("../views/mainView.vue") },
+      {
+        path: "/shop",
+        name: "Tienda",
+        component: () => import("../views/mainView.vue"),
+      },
       {
         path: "/shopProduct",
         component: () => import("../views/ProductShop.vue"),

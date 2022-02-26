@@ -115,7 +115,7 @@
             "
           >
             <box-icon type="solid" name="user-circle"></box-icon>
-            <span>Usuario</span>
+            <!-- <span>Usuario</span> -->
             <div ref="user" class="hidden ">
               <router-link to="/" class="font-bold ">Cerrar Sesion</router-link>
             </div>
@@ -139,7 +139,7 @@ export default {
   methods: {
     show(bar) {
       this.$refs[bar].className =
-        "flex flex-col bg-white pl-2 py-1 mt-8 left-0 absolute";
+        "flex flex-col bg-white w-28 pl-2 py-1 mt-8 right-0 absolute";
     },
     dispose(bar) {
       this.$refs[bar].className = "hidden";

@@ -46,10 +46,11 @@
           >
             Login
           </label>
-          <form method="#" action="#" class="mt-10">
+          <Form class="mt-10" @submit="enviar">
             <div>
-              <input
-                type="email"
+              <!-- <input
+                name="email"
+                v-model="user.email"
                 placeholder="Correo electronico"
                 class="
                   mt-1
@@ -64,13 +65,46 @@
                   hover:bg-blue-100
                   focus:bg-blue-100 focus:ring-0
                 "
+              /> -->
+              <Field
+                name="email"
+                v-model="user.email"
+                placeholder="Correo electronico"
+                :rules="emailVal"
+                class="
+                  mt-1
+                  block
+                  w-full
+                  px-3
+                  border-none
+                  bg-gray-100
+                  h-11
+                  rounded-xl
+                  shadow-lg
+                  hover:bg-blue-100
+                  focus:bg-blue-100 focus:ring-0
+                "
+              />
+              <ErrorMessage
+                name="email"
+                class="
+                  px-2
+                  text-sm text-red-700
+                  bg-red-100
+                  border border-red-400
+                  rounded
+                  scale-in-center
+                "
               />
             </div>
 
             <div class="mt-7 flex items-center justify-center">
-              <input
+              <Field
+                name="password"
                 :type="show ? 'text' : 'password'"
+                v-model="user.password"
                 placeholder="Contraseña"
+                :rules="passVal"
                 class="
                   w-full
                   px-3
@@ -95,7 +129,17 @@
                 </div>
               </button>
             </div>
-
+            <ErrorMessage
+              name="password"
+              class="
+                px-2
+                text-sm text-red-700
+                bg-red-100
+                border border-red-400
+                rounded
+                scale-in-center
+              "
+            />
             <div class="mt-7 flex">
               <label
                 for="remember_me"
@@ -121,7 +165,29 @@
             </div>
 
             <div class="mt-7">
-              <router-link
+              <button
+                type="submit"
+                class="
+                  flex
+                  justify-center
+                  bg-blue-500
+                  w-full
+                  py-3
+                  rounded-xl
+                  text-white
+                  shadow-xl
+                  hover:shadow-inner
+                  focus:outline-none
+                  transition
+                  duration-500
+                  ease-in-out
+                  transform
+                  hover:-translate-x hover:scale-105
+                "
+              >
+                Login
+              </button>
+              <!-- <router-link
                 to="/home"
                 class="
                   flex
@@ -142,7 +208,7 @@
                 "
               >
                 Login
-              </router-link>
+               </router-link> -->
             </div>
 
             <div class="mt-7">
@@ -164,7 +230,7 @@
                 </router-link>
               </div>
             </div>
-          </form>
+          </Form>
         </div>
       </div>
     </div>
@@ -172,17 +238,78 @@
 </template>
 
 <script>
+import { Field, Form, ErrorMessage } from "vee-validate";
+import { useToast } from "vue-toastification";
+import axios from "axios";
 export default {
+  setup() {
+    const toast = useToast();
+    return { toast };
+  },
   data: () => {
     return {
       show: false,
+      user: { email: "", password: "" },
+      submitted: false,
+      users: {},
     };
+  },
+  mounted() {
+    this.getUsers();
+  },
+  components: {
+    Field,
+    Form,
+    ErrorMessage,
   },
   methods: {
     passShow(e) {
       e.preventDefault();
       this.show = !this.show;
       console.log(this.show);
+    },
+    getUsers() {
+      axios
+        .get("https://61e762f3e32cd90017acbace.mockapi.io/User")
+        .then((response) => {
+          // console.log(response.data);
+          this.users = response.data;
+        })
+        .catch((e) => console.log(e));
+    },
+    emailVal(value) {
+      if (!value && !value.trim()) {
+        return "Debes llenar este campo";
+      }
+
+      const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+      if (!regex.test(value)) {
+        return "Tiene que ser un email valido, no seas imbecil";
+      }
+
+      return true;
+    },
+    passVal(value) {
+      if (value.length < 6) {
+        return "La contraseña tiene que ser de más de 6 caracteres";
+      }
+      return true;
+    },
+    enviar() {
+      let status = false;
+      for (const user of this.users) {
+        if (
+          user.email === this.user.email &&
+          user.password === this.user.password
+        ) {
+          status = true;
+        }
+      }
+      if (status) {
+        this.$router.push({ name: "Tienda" });
+      } else {
+        this.toast.error("Algo ha salido mal");
+      }
     },
   },
 };
