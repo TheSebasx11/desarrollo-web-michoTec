@@ -1,17 +1,20 @@
-'use strict'
 
-import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
-
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
   state: {
-    layout: 'home-layout'
+    cancion: "Friki",
+    user: null
   },
   mutations: {
-    SET_LAYOUT (state, newLayout) {
-      state.layout = newLayout
+    change(state){
+      state.cancion = "malparida";
+    },
+    addUser(state, data = {} ){
+      state.user = data || null;
     }
-  }
-})
+  },
+  
+});
+
+export default store;

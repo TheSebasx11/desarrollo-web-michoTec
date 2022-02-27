@@ -82,6 +82,7 @@
             </li>
           </ul>
           <div
+            v-on:click="mostrar"
             class="
               cart
               flex flex-row
@@ -116,8 +117,8 @@
           >
             <box-icon type="solid" name="user-circle"></box-icon>
             <!-- <span>Usuario</span> -->
-            <div ref="user" class="hidden ">
-              <router-link to="/" class="font-bold ">Cerrar Sesion</router-link>
+            <div ref="user" class="hidden">
+              <router-link to="/" class="font-bold">Cerrar Sesion</router-link>
             </div>
           </div>
         </div>
@@ -129,7 +130,7 @@
 <script>
 import logo from "../assets/MichoTec logo.png";
 import "boxicons";
-
+//import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -144,6 +145,11 @@ export default {
     dispose(bar) {
       this.$refs[bar].className = "hidden";
     },
+    mostrar() {
+      console.log(this.$store.state.user);
+      this.$store.commit('change');
+    },
   },
+  //computed: { ...mapState(["cancion"]) },
 };
 </script>

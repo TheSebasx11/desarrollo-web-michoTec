@@ -240,6 +240,7 @@
 <script>
 import { Field, Form, ErrorMessage } from "vee-validate";
 import { useToast } from "vue-toastification";
+//import { mapState } from "vuex";
 import axios from "axios";
 export default {
   setup() {
@@ -297,20 +298,24 @@ export default {
     },
     enviar() {
       let status = false;
+      let usuario = null;
       for (const user of this.users) {
         if (
           user.email === this.user.email &&
           user.password === this.user.password
         ) {
           status = true;
+          usuario = user;
         }
       }
       if (status) {
+        this.$store.commit('addUser', usuario);
         this.$router.push({ name: "Tienda" });
       } else {
         this.toast.error("Algo ha salido mal");
       }
     },
   },
+
 };
 </script>
