@@ -6,7 +6,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
 import "../css/output.css"
-import store from './store/index'
+import store from './store/store'
 import Vuex from 'vuex'
 
 const options = {};

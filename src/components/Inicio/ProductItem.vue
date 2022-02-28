@@ -19,9 +19,8 @@
         <p class="text-3xl p-4 text-justify">
           {{ Product.description }}
         </p>
-        <div class="text-center m-4">
-          <a
-            href=""
+        <div class="text-center m-4 flex gap-x-2">
+          <button
             class="
               border-2
               text-white
@@ -36,7 +35,24 @@
             "
           >
             Comprar Ahora
-          </a>
+          </button>
+          <button
+            v-on:click="Add(Product)"
+            class="
+              border-2
+              text-white
+              border-white
+              bg-blue-900
+              font-sans font-semibold
+              text-xl
+              p-2
+              rounded-xl
+              transition
+              hover:bg-blue-400
+            "
+          >
+            Añadir al carrito
+          </button>
         </div>
       </div>
     </div>
@@ -87,9 +103,14 @@
 <script>
 import axios from "axios";
 import RelatedProduct from "../Inicio/relatedProducts.vue";
+import { useToast } from "vue-toastification";
 export default {
   props: {
     id: Number,
+  },
+  setup() {
+    const toast = useToast();
+    return { toast };
   },
   data: () => {
     return {
@@ -100,7 +121,7 @@ export default {
         stock: 0,
         url: "",
       },
-      Products: {}
+      Products: {},
     };
   },
   components: {
@@ -124,10 +145,13 @@ export default {
         .get("https://61e762f3e32cd90017acbace.mockapi.io/Product")
         .then((response) => {
           const numero = Math.floor(Math.random() * 10);
-          this.Products = response.data.slice(numero, numero+3);
-          
+          this.Products = response.data.slice(numero, numero + 3);
         })
         .catch((e) => console.log(e));
+    },
+    Add(product) {
+      this.$store.commit("addItem", product);
+      console.log(this.$store.state.cartItems);
     },
   },
 };

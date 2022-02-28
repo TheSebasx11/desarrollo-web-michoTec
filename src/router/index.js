@@ -157,6 +157,10 @@ const routes = [
         component: () => import("../components/Inicio/ProductItem.vue"),
         props: true,
       },
+      {
+        path: "/cart",
+        component: () => import("../views/Cart.vue"),
+      }
     ],
   },
   /*{

@@ -81,8 +81,8 @@
               <router-link to="/home">Admin Panel</router-link>
             </li>
           </ul>
-          <div
-            v-on:click="mostrar"
+          <router-link
+            to="/cart"
             class="
               cart
               flex flex-row
@@ -96,10 +96,9 @@
               bg-blue-400
             "
           >
-            <!-- <img src="" class="carrito w-7" /> -->
             <box-icon name="cart" size="25px"></box-icon>
             <p class="mx-2">Carrito</p>
-          </div>
+          </router-link>
           <div
             @mouseover="show('user')"
             @mouseleave="dispose('user')"
@@ -116,7 +115,7 @@
             "
           >
             <box-icon type="solid" name="user-circle"></box-icon>
-            <!-- <span>Usuario</span> -->
+            <span>{{$store.state.user.name}}</span>
             <div ref="user" class="hidden">
               <router-link to="/" class="font-bold">Cerrar Sesion</router-link>
             </div>
@@ -130,7 +129,7 @@
 <script>
 import logo from "../assets/MichoTec logo.png";
 import "boxicons";
-//import { mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -145,11 +144,6 @@ export default {
     dispose(bar) {
       this.$refs[bar].className = "hidden";
     },
-    mostrar() {
-      console.log(this.$store.state.user);
-      this.$store.commit('change');
-    },
   },
-  //computed: { ...mapState(["cancion"]) },
 };
 </script>
