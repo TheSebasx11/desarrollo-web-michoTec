@@ -4,7 +4,7 @@
       <div class="div_address flex justify-center items-center my-4">
         <img
           class="border-double border-2 border-white"
-         
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Colombia_-_Córdoba_-_Planeta_Rica.svg/250px-Colombia_-_Córdoba_-_Planeta_Rica.svg.png"
           alt=""
         />
       </div>
