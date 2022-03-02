@@ -152,6 +152,7 @@ export default {
     Add(product) {
       this.$store.commit("addItem", product);
       console.log(this.$store.state.cartItems);
+      this.toast.success("Añadido!")
     },
   },
 };

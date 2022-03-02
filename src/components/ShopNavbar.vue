@@ -19,8 +19,8 @@
             w-30
             py-4
             pr-3
-            gap-y-3
-            flex flex-col
+            gap-y-1
+            grid grid-cols-2
             rounded-xl
           "
         >
@@ -28,7 +28,6 @@
             class="
               lg:flex lg:w-fit lg:flex-row lg:items-center lg:gap-x-5
               text-white
-              flex flex-col
               w-28
               pl-3
               gap-y-2
@@ -115,7 +114,7 @@
             "
           >
             <box-icon type="solid" name="user-circle"></box-icon>
-            <span>{{$store.state.user.name}}</span>
+            <span>{{ $store.state.user.name }}</span>
             <div ref="user" class="hidden">
               <router-link to="/" class="font-bold">Cerrar Sesion</router-link>
             </div>

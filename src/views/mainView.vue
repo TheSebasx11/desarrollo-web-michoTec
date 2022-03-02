@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-b h-full w-full from-blue-500 to-blue-800 pt-10">
+  <div class="bg-gradient-to-b h-screen w-full from-blue-500 to-blue-800 pt-10">
     <h2 class="featured_products_container font-bold text-3xl text-center">
       Productos destacados
     </h2>
@@ -8,7 +8,7 @@
        Obtén tu producto rapido. Que se acaban rapido
       </p>
     </div>
-    <div class="w-full md:grid-cols-5 grid grid-cols-2 gap-4 p-3">
+    <div class="w-full  md:grid-cols-5 grid grid-cols-2 gap-4 p-3">
       <main-produc-item
         v-for="product in Products"
         :key="product.id"

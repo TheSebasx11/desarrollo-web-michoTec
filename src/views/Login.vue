@@ -285,7 +285,7 @@ export default {
 
       const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
       if (!regex.test(value)) {
-        return "Tiene que ser un email valido, no seas imbecil";
+        return "Tiene que ser un email valido";
       }
 
       return true;

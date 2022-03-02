@@ -4,15 +4,20 @@
       <div
         className="col-span-12 h-[30rem] sm:col-span-12 md:col-span-7 lg:col-span-8 xxl:col-span-8 overflow-y-scroll"
       >
-        <cart-item
-          v-for="pro in Items"
-          :key="pro.id"
-          :cantidad="1"
-          :desc="pro.description"
-          :image="pro.url"
-          :nombre="pro.name"
-          :precio="pro.price"
-        />
+        <div v-if="Items != ''">
+          <cart-item
+            v-for="pro in Items"
+            :key="pro.id"
+            :cantidad="1"
+            :desc="pro.description"
+            :image="pro.url"
+            :nombre="pro.name"
+            :precio="pro.price"
+          />
+        </div>
+        <div v-else class="flex justify-center items-center h-full">
+          <div><p class=" font-bold text-2xl">Aun no hay elementos en el carrito</p></div>
+        </div>
       </div>
       <div className="w-96 bg-[#1E40AF] h-[30rem] ">
         <div className="flex flex-col h-full px-4 py-6 justify-between ">
@@ -25,12 +30,12 @@
             <div className="flex items-center justify-between pt-16">
               <p className="text-base leading-none text-white ">Subtotal</p>
               <p className="text-base leading-none text-white ">
-                <!-- {subt()} $ -->si
+                {{ subtotal }}$
               </p>
             </div>
             <div className="flex items-center justify-between pt-5">
               <p className="text-base leading-none text-white ">Envio</p>
-              <p className="text-base leading-none text-white ">0 $</p>
+              <p className="text-base leading-none text-white ">{{ envio }}$</p>
             </div>
           </div>
           <div>
@@ -41,7 +46,7 @@
               <p
                 className="text-2xl font-bold leading-normal text-right text-white "
               >
-                <!-- {subt()} -->
+                {{ subtotal + envio }}$
               </p>
             </div>
             <div className="flex gap-x-5">
@@ -72,11 +77,23 @@ export default {
   },
   data: () => {
     return {
-      Items: {},
+      Items: [],
     };
   },
   mounted() {
     this.Items = this.$store.state.cartItems;
+  },
+  computed: {
+    subtotal() {
+      var sum = 0;
+      this.Items.forEach((element) => {
+        sum += parseInt(element.price);
+      });
+      return sum;
+    },
+    envio() {
+      return this.subtotal * 0.1;
+    },
   },
 };
 </script>
